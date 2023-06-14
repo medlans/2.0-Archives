@@ -21,7 +21,7 @@ Pre-0.1:
 13Sept03 (2) (only sample projects)
 30Sept03 (only sample projects)
 2Oct03 (only sample projects)
-0.1-0..2:
+0.1-0.3
 20Oct03
 25Oct03
 27Oct03 (may exist, but the found build is a fake modification of 14Feb04 without the sample project)
@@ -30,6 +30,14 @@ Pre-0.1:
 11Jan04
 24Jan04
 22Feb04
+IACT05Mar04
+14Mar04
+15Mar04
+15Apr04
+19Apr04 (1)
+ScratchTest19Apr04
+20Apr04
+2Jun04
 1.x: (including prototypes):
 2.0:
 Other:
@@ -42,3 +50,6 @@ Scratch:
 27Feb05
 17Jan06
 Other:
+Unconfirmed Builds:
+14Apr05
+26Jun05b
