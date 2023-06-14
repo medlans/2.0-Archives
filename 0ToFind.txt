@@ -1,0 +1,44 @@
+W.I.P list
+Not found at all:
+Scratch:
+0.x:
+Pre-0.1:
+27Jun03 (1)
+30Jun03 (2)
+2July03
+3Jul03
+8July03
+12Jul03
+15Jul03
+21Jul03
+22Jul03
+28Jul03
+5Aug03
+12Aug03
+19Aug03
+25Aug03
+13Sept03 (1)
+13Sept03 (2) (only sample projects)
+30Sept03 (only sample projects)
+2Oct03 (only sample projects)
+0.1-0..2:
+20Oct03
+25Oct03
+27Oct03 (may exist, but the found build is a fake modification of 14Feb04 without the sample project)
+8Nov03
+14Nov03
+11Jan04
+24Jan04
+22Feb04
+1.x: (including prototypes):
+2.0:
+Other:
+Barely to Mostly Restored/Found:
+Scratch:
+27Jun03 (2)
+30Jun03
+24Aug03
+30Nov03
+27Feb05
+17Jan06
+Other:
