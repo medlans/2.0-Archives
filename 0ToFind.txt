@@ -40,6 +40,8 @@ ScratchTest19Apr04
 2Jun04
 1.x: (including prototypes):
 2.0:
+v211 (mentioned by johnm in a forum post: https://scratch.mit.edu/discuss/topic/959/
+Vimeo Build found here: http://vimeo.com/41683547
 Other:
 Barely to Mostly Restored/Found:
 Scratch:
