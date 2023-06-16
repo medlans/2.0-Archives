@@ -24,7 +24,6 @@ Pre-0.1:
 0.1-0.3
 20Oct03
 25Oct03
-27Oct03 (may exist, but the found build is a fake modification of 14Feb04 without the sample project)
 8Nov03
 14Nov03
 11Jan04
@@ -38,20 +37,61 @@ IACT05Mar04
 ScratchTest19Apr04
 20Apr04
 2Jun04
+02Jun04B
+04Jun04
+09Jun04
+10Jun04
+17Jun04
+18Jun04
+05Jul04
+07Jul04
+07Jul04B
+0.4-0.9
+Squeak08Jul04 (not to be confused with 08Jul04)
+13Aug04
+29Sep04
+13Oct04
+18Oct04
+20Jan05
+07Feb05
+14Feb05
+23Feb05
+7Mar05
 1.x: (including prototypes):
 2.0:
-v211 (mentioned by johnm in a forum post: https://scratch.mit.edu/discuss/topic/959/
 Vimeo Build found here: http://vimeo.com/41683547
+v211 (mentioned by johnm in a forum post: https://scratch.mit.edu/discuss/topic/959/
+v457
 Other:
+Fake:
+27Oct03 (may exist, but the found build is a fake modification of 14Feb04 without the sample project)
+20Feb05 (may exist, but the current build is a mockup and not real)
+LogoBlocks:
+TurtleArt:
 Barely to Mostly Restored/Found:
 Scratch:
 27Jun03 (2)
 30Jun03
 24Aug03
 30Nov03
-27Feb05
-17Jan06
+27Feb05 (mostly restored)
+17Jan06 (found but was corrupted)
 Other:
 Unconfirmed Builds:
 14Apr05
 26Jun05b
+Found but not added:
+Scratch:
+ScratchXO builds (excluding ScratchXO-1)
+LogoBlocks:
+Lego Mindstorms RIS (1998)
+August 25, 2000 (found, but currently no access)
+October 30, 2001 (found, but currently no access)
+Logo Blocks Mac OS X 2012-01-15 (partially found, corrupted)
+TurtleArt:
+0.06e
+0.06h
+PicoBlocks:
+PicoBlocks_V087
+0.06a
+v1.0
