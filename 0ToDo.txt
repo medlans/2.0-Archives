@@ -59,9 +59,12 @@ Squeak08Jul04 (not to be confused with 08Jul04)
 7Mar05
 1.x: (including prototypes):
 2.0:
-Vimeo Build found here: http://vimeo.com/41683547
-v211 (mentioned by johnm in a forum post: https://scratch.mit.edu/discuss/topic/959/
-v457
+Vimeo Build found here: http://vimeo.com/41683547 (unknown version number from 45-111 [all of the range ones are inclusive])
+v168, v192, v205, v213-214, v223, v225, v227, v231-233, v236, v237b, v239, v241, v247, v251, v252, v253, v254, v257, v264, v270-273, v275-276, v278-279, v281-288, v291-294, v297-299, v314, v316, v317, v318, v321, v324, v333, v335, v338, v344-346, v352, v355, v366 (https://gist.github.com/nathan/15df588ecad6431c53aa )
+v211 (mentioned by johnm in a forum post: https://scratch.mit.edu/discuss/topic/959/ and here https://gist.github.com/nathan/15df588ecad6431c53aa
+More Map Scratch Versions (the only one we have is v349, which says it's an offline editor alpha)
+Scratch 2.0 Offline Editors (beta/alphas/final builds, needed)
+v391 (https://scratch.mit.edu/discuss/topic/26075
 Other:
 Fake:
 27Oct03 (may exist, but the found build is a fake modification of 14Feb04 without the sample project)
@@ -78,8 +81,26 @@ Scratch:
 17Jan06 (found but was corrupted)
 Other:
 Unconfirmed Builds:
+Note: Does anyone know if they skipped any of the Scratch 2.0 numbers?
 14Apr05
 26Jun05b
+v45-110 (besides the Vimeo Build)
+v112-115
+v117-120
+v122-131
+v133-136
+v198
+v201
+v202
+v208
+v210
+v243-246
+v249-250
+v255-256
+v259-261
+v265-269
+v280
+v289-290
 Found but not added:
 Scratch:
 ScratchXO builds (excluding ScratchXO-1)
