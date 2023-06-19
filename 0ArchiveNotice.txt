@@ -2,3 +2,4 @@ To run .swf files, you will need the Adobe Flash Projector.
 You'll want to go here: https://web.archive.org/web/20220401020702/https://www.adobe.com/support/flashplayer/debug_downloads.html to get that for whatever operating system you're using. 
 Mac OS is labeled as "Macintosh".
 To run .image files, you can use squeakjs: https://squeak.js.org/run/ or use the 1.0/1.1/1.2/1.3/1.4 application.
+Credits to TBCA (The Block Coding Archives) for finding a lot of these builds or helping to find them.
