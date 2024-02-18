@@ -1,0 +1,1 @@
+Locked versions will not allow you to use the actual editor.
