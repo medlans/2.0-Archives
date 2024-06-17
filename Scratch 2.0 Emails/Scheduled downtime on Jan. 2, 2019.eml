@@ -1,0 +1,868 @@
+Delivered-To: jaxonferrero1@gmail.com
+Received: by 2002:a02:f13:0:0:0:0:0 with SMTP id h19csp1310111jad;
+        Fri, 21 Dec 2018 11:43:45 -0800 (PST)
+X-Google-Smtp-Source: ALg8bN7OcfnEr9IhKWBjXD24gINqzVC9wr3do55LbLioIU3UwG+5BikaAaqdhurcLleJ3IIl9Pbi
+X-Received: by 2002:a25:aea3:: with SMTP id b35mr3867009ybj.364.1545421425257;
+        Fri, 21 Dec 2018 11:43:45 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1545421425; cv=none;
+        d=google.com; s=arc-20160816;
+        b=fSxQsylgseXzLIFSlxfUHjBvbPUycSoeVJIxxyCYgs2gDXxkPzuDeeCbZgnbMDvdvC
+         7d4TJhuxfTmhiteH52KKJSxYepIO619WpvuEoOw5ei1Ea7HMG3Iujo4B8870h779Qogt
+         ALoVU6rw+YsV2Y74XvWyMMidiKdQj4KLEacWfLJbqGAL4NeFnGddfZ5SbRp9Sj38wT1/
+         m1CjxBC3H6uUax8Cqoelnq2G34HR7NHLyNiw3UvKkkfSANaIXWnHE+/QhOzlNY+vkTb+
+         OGdfDVxlbxd3QzcvVZpv0b1KPvLYQ+f+wseiZOfKTcYHwA+SCpHp+/hp3xMjQuEC996C
+         Lggg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=mime-version:list-unsubscribe-post:list-unsubscribe:list-id
+         :feedback-id:message-id:date:to:reply-to:from:subject:dkim-signature
+         :dkim-signature;
+        bh=YNlNtLIxZpr1OPpEmcz8FdJtgFIu51pZ6ehQm9bC3P8=;
+        b=C/IbItOzOtyq4AefFZ00Ffm4GH3AMgoyYOhnhwon9GbZxP9rCTQUOJxfkdV5v3P0Af
+         e7baqP2lG4QI1CfrSXO0DZd34W3JWH0oUd60sHLQpV4uEAsEdVEkyB7WMtAovMZpThJL
+         OTGxu82Ar6NsJnniKRFHfFkKvIWeGlQqmMjAYibuQn9z/I3y1rdDs1N3kW8IrAm608IG
+         c2I1oAnSViTzcbhWUH63pNlioMa5mg992yjs2Kt+Zm0J6MNAQNF9tmD9GVeHJMavUUS9
+         7al8NCYPOX0mfkstr8ymYP8CB9KX1QJmQAN6HHyqSvWISl7D1qs9JNsMuiXUw7Vzscwc
+         T8Bg==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@mailchimpapp.net header.s=k1 header.b=eYYRzTAi;
+       dkim=pass header.i=@gmail.mcsv.net header.s=k1 header.b=q1gLjPkO;
+       spf=pass (google.com: domain of bounce-mc.us9_36847697.900441-jaxonferrero1=gmail.com@mail24.atl281.mcsv.net designates 198.2.143.24 as permitted sender) smtp.mailfrom="bounce-mc.us9_36847697.900441-jaxonferrero1=gmail.com@mail24.atl281.mcsv.net"
+Return-Path: <bounce-mc.us9_36847697.900441-jaxonferrero1=gmail.com@mail24.atl281.mcsv.net>
+Received: from mail24.atl281.mcsv.net (mail24.atl281.mcsv.net. [198.2.143.24])
+        by mx.google.com with ESMTPS id z4si15186782ybc.412.2018.12.21.11.43.44
+        for <jaxonferrero1@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Fri, 21 Dec 2018 11:43:45 -0800 (PST)
+Received-SPF: pass (google.com: domain of bounce-mc.us9_36847697.900441-jaxonferrero1=gmail.com@mail24.atl281.mcsv.net designates 198.2.143.24 as permitted sender) client-ip=198.2.143.24;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@mailchimpapp.net header.s=k1 header.b=eYYRzTAi;
+       dkim=pass header.i=@gmail.mcsv.net header.s=k1 header.b=q1gLjPkO;
+       spf=pass (google.com: domain of bounce-mc.us9_36847697.900441-jaxonferrero1=gmail.com@mail24.atl281.mcsv.net designates 198.2.143.24 as permitted sender) smtp.mailfrom="bounce-mc.us9_36847697.900441-jaxonferrero1=gmail.com@mail24.atl281.mcsv.net"
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=k1; d=mailchimpapp.net;
+ h=Subject:From:Reply-To:To:Date:Message-ID:List-ID:List-Unsubscribe:
+ Content-Type:MIME-Version; i=no-reply=3D3Dscratch.mit.edu@mailchimpapp.net;
+ bh=YNlNtLIxZpr1OPpEmcz8FdJtgFIu51pZ6ehQm9bC3P8=;
+ b=eYYRzTAi45nMQf88SykSqDwL4JgvgFAO0DgxftziDsEymcqrMK+4Nf5meu/O0RTqE6/trMjbhpol
+   M/f7jMBjQ2ObUr/BftAZqwAwoTMc15VEmh9tWIYSfivfdW6s9z+3rniFAKGYvA5z/jpUB+qQO2YE
+   jKp3G80qVxp8kNZBQ00=
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=k1; d=gmail.mcsv.net;
+ h=Subject:From:Reply-To:To:Date:Message-ID:Feedback-ID:List-ID:
+ List-Unsubscribe:Content-Type:MIME-Version;
+ bh=YNlNtLIxZpr1OPpEmcz8FdJtgFIu51pZ6ehQm9bC3P8=;
+ b=q1gLjPkOfCOM4peM7k+0JPul65QrpRPl3gauuQ6xfXG3Z1ifsXD5VubNFapsLoUyrYMptJztgDDU
+   na65FW9IMp/i5GKqi4yVMAnEyb4/jBDFVKYml4w7f1hCYeH4mmXtTwLewZYcpKQPQefdtE4PaHo5
+   lUOREPCGXUIwrnHQvQk=
+Received: from (127.0.0.1) by mail24.atl281.mcsv.net id h3l1722ddl4g for <jaxonferrero1@gmail.com>; Fri, 21 Dec 2018 19:39:31 +0000 (envelope-from <bounce-mc.us9_36847697.900441-jaxonferrero1=gmail.com@mail24.atl281.mcsv.net>)
+Subject: =?utf-8?Q?Scheduled=20downtime=20on=20Jan.=202=2C=202019?=
+From: =?utf-8?Q?The=20Scratch=20Team?= <no-reply@scratch.mit.edu>
+Reply-To: =?utf-8?Q?The=20Scratch=20Team?= <no-reply@scratch.mit.edu>
+To: <jaxonferrero1@gmail.com>
+Date: Fri, 21 Dec 2018 19:39:31 +0000
+Message-ID: <96e741c12c99f46f1f3e95e09.295c2f8fe2.20181221193836.0b7e1c408e.b2c1dfa5@mail24.atl281.mcsv.net>
+X-Mailer: MailChimp Mailer - **CID0b7e1c408e295c2f8fe2**
+X-Campaign: mailchimp96e741c12c99f46f1f3e95e09.0b7e1c408e
+X-campaignid: mailchimp96e741c12c99f46f1f3e95e09.0b7e1c408e
+X-Report-Abuse: Please report abuse for this campaign here: https://mailchimp.com/contact/abuse/?u=96e741c12c99f46f1f3e95e09&id=0b7e1c408e&e=295c2f8fe2
+X-MC-User: 96e741c12c99f46f1f3e95e09
+Feedback-ID: 36847697:36847697.900441:us9:mc
+List-ID: 96e741c12c99f46f1f3e95e09mc list <96e741c12c99f46f1f3e95e09.588965.list-id.mcsv.net>
+X-Accounttype: pd
+List-Unsubscribe: <https://mit.us9.list-manage.com/unsubscribe?u=96e741c12c99f46f1f3e95e09&id=149bd1a4c2&e=295c2f8fe2&c=0b7e1c408e>, <mailto:unsubscribe-mc.us9_96e741c12c99f46f1f3e95e09.0b7e1c408e-295c2f8fe2@mailin.mcsv.net?subject=unsubscribe>
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+Content-Type: multipart/alternative; boundary="_----------=_MCPart_208167040"
+MIME-Version: 1.0
+
+This is a multi-part message in MIME format
+
+--_----------=_MCPart_208167040
+Content-Type: text/plain; charset="utf-8"; format="fixed"
+Content-Transfer-Encoding: quoted-printable
+
+https://scratch.mit.edu/?mc_cid=3D0b7e1c408e&mc_eid=3D[UNIQID]
+
+
+view in browser (https://mailchi.mp/scratch/get-creative-with-scratch-for-=
+computer-science-education-week-900441?e=3D295c2f8fe2)
+
+
+
+Scheduled Downtime for Scratch
+
+
+
+The next generation of Scratch=2C Scratch 3.0=2C is almost here!
+
+As part of the Scratch 3.0 launch=2C the Scratch website (scratch.mit.edu)=
+ will go into =E2=80=9Cmaintenance mode=E2=80=9D and will be unavailable s=
+tarting at 7AM ET on January 2nd. We expect the site to be back up by the=
+ afternoon=2C but you can follow us on Twitter (https://twitter.com/scratc=
+h?mc_cid=3D0b7e1c408e&mc_eid=3D[UNIQID]) for updates. Once the site comes=
+ back up=2C Scratch 3.0 will be officially launched and connected to the c=
+ommunity!
+
+We wanted to give you advance notice in case you would like to download th=
+e offline editor for use during this time. You can download the offline ed=
+itor here: scratch.mit.edu/download/
+
+Read more about what=E2=80=99s coming in Scratch 3.0 (https://medium.com/s=
+cratchteam-blog/try-the-scratch-3-0-beta-today-b50a05d63348?mc_cid=3D0b7e1=
+c408e&mc_eid=3D[UNIQID])
+Follow us on Twitter for updates (https://twitter.com/scratch?mc_cid=3D0b7=
+e1c408e&mc_eid=3D[UNIQID])
+
+
+
+https://www.facebook.com/scratchteam/?mc_cid=3D0b7e1c408e&mc_eid=3D[UNIQI=
+D] https://twitter.com/scratch?mc_cid=3D0b7e1c408e&mc_eid=3D[UNIQID] http=
+s://medium.com/scratchfoundation-blog?mc_cid=3D0b7e1c408e&mc_eid=3D[UNIQI=
+D]
+
+Scratch (https://scratch.mit.edu/?mc_cid=3D0b7e1c408e&mc_eid=3D[UNIQID])=
+ is a project of the Lifelong Kindergarten Group at the MIT Media Lab
+
+unsubscribe from this list (https://mit.us9.list-manage.com/unsubscribe?u=
+=3D96e741c12c99f46f1f3e95e09&id=3D149bd1a4c2&e=3D295c2f8fe2&c=3D0b7e1c408e)=
+           update subscription preferences (https://mit.us9.list-manage.co=
+m/profile?u=3D96e741c12c99f46f1f3e95e09&id=3D149bd1a4c2&e=3D295c2f8fe2)
+--_----------=_MCPart_208167040
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www=
+=2Ew3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns=3D"http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv=3D"content-type" content=3D"text/html; charset=3Dutf-=
+8">
+    <meta name=3D"viewport" content=3D"width=3Ddevice-width=2C initial-sca=
+le=3D1=2C minimum-scale=3D1=2C maximum-scale=3D1">
+    <title>Scheduled downtime on Jan. 2=2C 2019</title>
+
+  <style type=3D"text/css">
+=09=09body{
+=09=09=09width:100%;
+=09=09=09background-color:#FCFCFC;
+=09=09=09margin:0;
+=09=09=09padding:0;
+=09=09=09-webkit-font-smoothing:antialiased;
+=09=09=09mso-margin-top-alt:0;
+=09=09=09mso-margin-bottom-alt:0;
+=09=09=09mso-padding-alt:0 0 0 0;
+=09=09=09-webkit-text-size-adjust:none;
+=09=09}
+=09=09a{
+=09=09=09color:#FFFFFF !important;
+=09=09=09font-weight:bold !important;
+=09=09=09text-decoration:none !important;
+=09=09}
+=09=09td a{
+=09=09=09color:#FFFFFF !important;
+=09=09=09font-weight:bold !important;
+=09=09=09text-decoration:none !important;
+=09=09}
+=09=09td.title_text1{
+=09=09=09color:#6B6B6B !important;
+=09=09=09font-weight:normal !important;
+=09=09}
+=09=09td.title_text1 a{
+=09=09=09color:#25aff4 !important;
+=09=09=09font-weight:bold !important;
+=09=09=09text-decoration:none !important;
+=09=09}
+=09=09td.desc_text1{
+=09=09=09color:#6B6B6B !important;
+=09=09=09font-weight:normal !important;
+=09=09}
+=09=09td.desc_text1 a{
+=09=09=09color:#25aff4 !important;
+=09=09=09font-weight:bold !important;
+=09=09=09text-decoration:none !important;
+=09=09}
+=09=09td.mde_button1{
+=09=09=09color:#FFFFFF !important;
+=09=09=09font-weight:normal !important;
+=09=09}
+=09=09td.mde_button1 a{
+=09=09=09color:#FFFFFF !important;
+=09=09=09font-weight:bold !important;
+=09=09=09text-decoration:none !important;
+=09=09}
+=09=09.mde_button1 a{
+=09=09=09font-size:13px !important;
+=09=09=09line-height:13px !important;
+=09=09=09color:#FFFFFF !important;
+=09=09=09text-decoration:none !important;
+=09=09}
+=09=09a.mde_button1{
+=09=09=09font-size:13px !important;
+=09=09=09line-height:13px !important;
+=09=09=09color:#FFFFFF !important;
+=09=09=09text-decoration:none !important;
+=09=09}
+=09=09a.mde_button1 span{
+=09=09=09font-size:13px !important;
+=09=09=09line-height:13px !important;
+=09=09=09color:#FFFFFF !important;
+=09=09}
+=09=09span{
+=09=09=09font-size:13px !important;
+=09=09=09line-height:13px !important;
+=09=09=09color:#FFFFFF !important;
+=09=09}
+=09@media only screen and (max-width: 640px){
+=09=09[class=3Dmde_main_td]{
+=09=09=09min-width:100% !important;
+=09=09}
+
+}=09@media only screen and (max-width: 640px){
+=09=09[class=3Dmde_600]{
+=09=09=09width:440px !important;
+=09=09}
+
+}=09@media only screen and (max-width: 640px){
+=09=09[class=3Dmde_600_border]{
+=09=09=09width:440px !important;
+=09=09}
+
+}=09@media only screen and (max-width: 640px){
+=09=09[class=3Dmde_550]{
+=09=09=09width:400px !important;
+=09=09}
+
+}=09@media only screen and (max-width: 640px){
+=09=09[class=3Dmde_main_td_bg]{
+=09=09=09min-width:100% !important;
+=09=09}
+
+}=09@media only screen and (max-width: 640px){
+=09=09[class=3Dmde_600_bg]{
+=09=09=09min-width:100% !important;
+=09=09}
+
+}=09@media only screen and (max-width: 640px){
+=09=09[class=3Dmde_social]{
+=09=09=09width:160px !important;
+=09=09}
+
+}=09@media only screen and (max-width: 640px){
+=09=09[class=3Dmde_600_banner]{
+=09=09=09width:440px !important;
+=09=09}
+
+}=09@media only screen and (max-width: 640px){
+=09=09[class=3Dmde_section2]{
+=09=09=09width:100% !important;
+=09=09}
+
+}=09@media only screen and (max-width: 640px){
+=09=09[class=3Dmde_section2_space]{
+=09=09=09width:1px !important;
+=09=09=09height:20px !important;
+=09=09}
+
+}=09@media only screen and (max-width: 640px){
+=09=09[class=3Dmde_section2a]{
+=09=09=09width:75px !important;
+=09=09}
+
+}=09@media only screen and (max-width: 640px){
+=09=09[class=3Dmde_section2b]{
+=09=09=09width:150px !important;
+=09=09}
+
+}=09@media only screen and (max-width: 640px){
+=09=09[class=3Dles_height1]{
+=09=09=09height:40px !important;
+=09=09}
+
+}=09@media only screen and (max-width: 640px){
+=09=09[class=3Dmde_section3]{
+=09=09=09width:100% !important;
+=09=09}
+
+}=09@media only screen and (max-width: 640px){
+=09=09[class=3Dmde_section3_space]{
+=09=09=09width:1px !important;
+=09=09=09height:20px !important;
+=09=09}
+
+}=09@media only screen and (max-width: 640px){
+=09=09[class=3Dmde_section2a_image] img{
+=09=09=09width:75px !important;
+=09=09=09height:auto !important;
+=09=09}
+
+}=09@media only screen and (max-width: 640px){
+=09=09[class=3Dmde_banner_image] img{
+=09=09=09width:100% !important;
+=09=09=09height:auto !important;
+=09=09}
+
+}=09@media only screen and (max-width: 640px){
+=09=09[class=3Dmde_section2_image] img{
+=09=09=09width:100% !important;
+=09=09=09height:auto !important;
+=09=09}
+
+}=09@media only screen and (max-width: 640px){
+=09=09[class=3Dmde_section3_image] img{
+=09=09=09width:100% !important;
+=09=09=09height:auto !important;
+=09=09}
+
+}=09@media only screen and (max-width: 640px){
+=09=09[class=3Dmde_section2_image_200_400] img{
+=09=09=09width:100% !important;
+=09=09=09height:auto !important;
+=09=09=09min-width:100% !important;
+=09=09=09max-width:100% !important;
+=09=09}
+
+}=09@media only screen and (max-width: 640px){
+=09=09[class=3Dview_in_browser]{
+=09=09=09font-size:12px !important;
+=09=09=09line-height:18px !important;
+=09=09=09text-align:right !important;
+=09=09}
+
+}=09@media only screen and (max-width: 640px){
+=09=09[class=3Dview_in_browser] a{
+=09=09=09font-size:12px !important;
+=09=09=09line-height:18px !important;
+=09=09=09text-decoration:underline !important;
+=09=09=09text-align:right !important;
+=09=09}
+
+}=09@media only screen and (max-width: 640px){
+=09=09[class=3Dmde_button1_tbl]{
+=09=09=09width:200px !important;
+=09=09=09height:31px !important;
+=09=09}
+
+}=09@media only screen and (max-width: 640px){
+=09=09[class=3Dmde_button1]{
+=09=09=09text-decoration:none !important;
+=09=09}
+
+}=09@media only screen and (max-width: 640px){
+=09=09[class=3Dmde_button1] a{
+=09=09=09text-decoration:none !important;
+=09=09}
+
+}=09@media only screen and (max-width: 479px){
+=09=09[class=3Dmde_main_td]{
+=09=09=09min-width:100% !important;
+=09=09}
+
+}=09@media only screen and (max-width: 479px){
+=09=09[class=3Dmde_600]{
+=09=09=09width:95% !important;
+=09=09}
+
+}=09@media only screen and (max-width: 479px){
+=09=09[class=3Dmde_600_border]{
+=09=09=09width:86% !important;
+=09=09}
+
+}=09@media only screen and (max-width: 479px){
+=09=09[class=3Dmde_550]{
+=09=09=09width:95% !important;
+=09=09}
+
+}=09@media only screen and (max-width: 479px){
+=09=09[class=3Dmde_main_td_bg]{
+=09=09=09min-width:100% !important;
+=09=09}
+
+}=09@media only screen and (max-width: 479px){
+=09=09[class=3Dmde_600_bg]{
+=09=09=09min-width:100% !important;
+=09=09}
+
+}=09@media only screen and (max-width: 479px){
+=09=09[class=3Dmde_social]{
+=09=09=09width:160px !important;
+=09=09}
+
+}=09@media only screen and (max-width: 479px){
+=09=09[class=3Dmde_600_banner]{
+=09=09=09width:95% !important;
+=09=09}
+
+}=09@media only screen and (max-width: 479px){
+=09=09[class=3Dmde_section2]{
+=09=09=09width:100% !important;
+=09=09}
+
+}=09@media only screen and (max-width: 479px){
+=09=09[class=3Dmde_section2_space]{
+=09=09=09width:1px !important;
+=09=09=09height:20px !important;
+=09=09}
+
+}=09@media only screen and (max-width: 479px){
+=09=09[class=3Dmde_section2a]{
+=09=09=09width:100% !important;
+=09=09}
+
+}=09@media only screen and (max-width: 479px){
+=09=09[class=3Dmde_section2b]{
+=09=09=09width:100% !important;
+=09=09}
+
+}=09@media only screen and (max-width: 479px){
+=09=09[class=3Dles_height1]{
+=09=09=09height:20px !important;
+=09=09}
+
+}=09@media only screen and (max-width: 479px){
+=09=09[class=3Dmde_section3]{
+=09=09=09width:100% !important;
+=09=09}
+
+}=09@media only screen and (max-width: 479px){
+=09=09[class=3Dmde_section3_space]{
+=09=09=09width:1px !important;
+=09=09=09height:20px !important;
+=09=09}
+
+}=09@media only screen and (max-width: 479px){
+=09=09[class=3Dmde_section2a_image] img{
+=09=09=09width:100% !important;
+=09=09=09height:auto !important;
+=09=09}
+
+}=09@media only screen and (max-width: 479px){
+=09=09[class=3Dmde_banner_image] img{
+=09=09=09width:100% !important;
+=09=09=09height:auto !important;
+=09=09}
+
+}=09@media only screen and (max-width: 479px){
+=09=09[class=3Dmde_section2_image] img{
+=09=09=09width:100% !important;
+=09=09=09height:auto !important;
+=09=09}
+
+}=09@media only screen and (max-width: 479px){
+=09=09[class=3Dmde_section3_image] img{
+=09=09=09width:100% !important;
+=09=09=09height:auto !important;
+=09=09}
+
+}=09@media only screen and (max-width: 479px){
+=09=09[class=3Dmde_section2_image_200_400] img{
+=09=09=09width:100% !important;
+=09=09=09height:auto !important;
+=09=09=09min-width:100% !important;
+=09=09=09max-width:100% !important;
+=09=09}
+
+}=09@media only screen and (max-width: 479px){
+=09=09[class=3Dview_in_browser]{
+=09=09=09font-size:12px !important;
+=09=09=09line-height:38px !important;
+=09=09=09text-align:center !important;
+=09=09}
+
+}=09@media only screen and (max-width: 479px){
+=09=09[class=3Dview_in_browser] a{
+=09=09=09font-size:12px !important;
+=09=09=09line-height:38px !important;
+=09=09=09text-decoration:underline !important;
+=09=09=09text-align:center !important;
+=09=09}
+
+}=09@media only screen and (max-width: 479px){
+=09=09[class=3Dmde_button1_tbl]{
+=09=09=09width:180px !important;
+=09=09=09height:31px !important;
+=09=09}
+
+}=09@media only screen and (max-width: 479px){
+=09=09[class=3Dmde_button1]{
+=09=09=09text-decoration:none !important;
+=09=09}
+
+}=09@media only screen and (max-width: 479px){
+=09=09[class=3Dmde_button1] a{
+=09=09=09text-decoration:none !important;
+=09=09}
+
+}</style></head>
+  <body style=3D"width: 100%;background-color: #FCFCFC;margin: 0;padding:=
+ 0;-webkit-font-smoothing: antialiased;mso-margin-top-alt: 0;mso-margin-bo=
+ttom-alt: 0;mso-padding-alt: 0 0 0 0;-webkit-text-size-adjust: none;">
+    <table width=3D"100%" border=3D"0" align=3D"center" cellpadding=3D"0"=
+ cellspacing=3D"0" bgcolor=3D"#FCFCFC" style=3D"background-position:top;ba=
+ckground-repeat:repeat-x;">
+      <!-- 2 Section Left and Right -->
+      <tr>
+        <td align=3D"center" class=3D"mde_main_td_bg" style=3D"min-width:1=
+00%;">
+          <table align=3D"center" class=3D"mde_600_bg" width=3D"100%" bgco=
+lor=3D"#25AFF4" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" style=3D"=
+border-collapse:collapse;">
+            <tr>
+              <td align=3D"center" style=3D"padding:0 10px;">
+                <table align=3D"center" class=3D"mde_600" width=3D"600" bo=
+rder=3D"0" cellspacing=3D"0" cellpadding=3D"0" style=3D"border-collapse:co=
+llapse;">
+                  <tr>
+                    <td height=3D"20" style=3D"font-size:1px;line-height:1=
+px;">=C2=A0</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <!-- Section Content -->
+                      <table align=3D"left" class=3D"mde_section2a" width=
+=3D"75" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" style=3D"border-c=
+ollapse:collapse;">
+                        <!-- Image -->
+                        <tr>
+                          <td align=3D"center" class=3D"mde_section2a_imag=
+e">
+                            <a href=3D"https://mit.us9.list-manage.com/tra=
+ck/click?u=3D96e741c12c99f46f1f3e95e09&id=3Dfc2432b5e6&e=3D295c2f8fe2" ta=
+rget=3D"_blank" style=3D"color: #FFFFFF !important;font-weight: bold !impo=
+rtant;text-decoration: none !important;">
+                              <img src=3D"https://gallery.mailchimp.com/e9=
+7f841a45c9225e11e72bf6b/images/c47d0a01-3a3c-4ff4-aea6-39813f46802b.png" a=
+lt=3D"Logo" border=3D"0" style=3D"margin: 0; padding: 0;max-width:70px; ma=
+x-height:auto; display:block; border:0px;"></a>
+                            </td>
+                          </tr>
+                          <!-- End Image -->
+                        </table>
+                        <!-- End Section Content -->
+                        <!-- Section Space -->
+                        <table align=3D"left" class=3D"mde_section2_spacea=
+" width=3D"2" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" style=3D"bo=
+rder-collapse:collapse;">
+                          <tr>
+                            <td>
+
+                            </td>
+                          </tr>
+                        </table>
+                        <!-- End Section Space -->
+                        <!-- Section Content -->
+                        <table align=3D"right" class=3D"mde_section2b" wid=
+th=3D"200" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" style=3D"borde=
+r-collapse:collapse;">
+                          <tr>
+                            <td height=3D"4" class=3D"section_height" styl=
+e=3D"font-size:2px;line-height:2px;">=C2=A0</td>
+                          </tr>
+                          <!-- Content -->
+                          <tr>
+                            <td align=3D"right" class=3D"view_in_browser"=
+ style=3D"font-family:'Helvetica Neue'=2C Helvetica=2C Arial=2C sans-serif=
+;font-weight:normal;color:#25aff4;font-size:12px;line-height:18px;">
+                              <div>
+                                <a href=3D"https://mailchi.mp/scratch/get-=
+creative-with-scratch-for-computer-science-education-week-900441?e=3D=
+295c2f8fe2" target=3D"_blank" class=3D"view_in_browser" style=3D"font-family:'Hel=
+vetica Neue'=2C Helvetica=2C Arial=2C sans-serif;font-weight:bold;color:#F=
+FFFFF !important;font-size:12px;line-height:18px;text-decoration:none;">
+                                  view in browser
+                                </a>
+                              </div>
+                            </td>
+                          </tr>
+                          <!-- End Content -->
+                        </table>
+                        <!-- End Section Content -->
+                      </td>
+                    </tr>
+                    <tr>
+                      <td height=3D"65" class=3D"les_height1" style=3D"fon=
+t-size:1px;line-height:1px;">=C2=A0</td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <!-- End 2 Section Left and Right -->
+        <!-- Text area -->
+        <tr>
+          <td align=3D"center" class=3D"mde_main_td_bg" style=3D"max-width=
+:100%;">
+            <table align=3D"center" class=3D"mde_600_bg" width=3D"100%" bg=
+color=3D"#25AFF4" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" style=
+=3D"border-collapse:collapse;">
+              <tr>
+                <td height=3D"2" style=3D"font-size:1px;line-height:1px;">=
+=C2=A0</td>
+              </tr>
+              <tr>
+                <td align=3D"center" style=3D"padding:0 10px;">
+                  <table align=3D"center" class=3D"mde_600" width=3D"600"=
+ border=3D"0" cellspacing=3D"0" cellpadding=3D"0" style=3D"border-collapse=
+:collapse;">
+                    <!-- Content -->
+                    <tr>
+                      <td align=3D"center" class=3D"title_text1" style=3D"=
+font-family:'Helvetica Neue'=2C Helvetica=2C Arial=2C sans-serif;font-weig=
+ht:bold;color:#FFFFFF !important;font-size:24px;line-height:28px;">
+                        <div>Scheduled Downtime for Scratch</div>
+                      </td>
+                    </tr>
+                    <!-- End Content -->
+                  </table>
+                </td>
+              </tr>
+              <tr>
+                <td height=3D"60" style=3D"font-size:1px;line-height:1px;"=
+>=C2=A0</td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <!-- End Text area -->
+        <!-- Banner 600 Image -->
+        <tr>
+          <td align=3D"center" class=3D"mde_main_td" style=3D"min-width:10=
+0%;">
+            <table align=3D"center" class=3D"mde_600_banner" width=3D"100%=
+" bgcolor=3D"#FCFCFC" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" sty=
+le=3D"border-collapse:collapse;border-top:1px solid #F6F6F6;">
+              <tr>
+                <td align=3D"center" style=3D"padding:0 10px;">
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <!-- End Banner 600 Image -->
+        <!-- Text area -->
+        <tr>
+          <td align=3D"center" class=3D"mde_main_td" style=3D"min-width:60=
+0px;">
+            <table align=3D"center" class=3D"mde_600" width=3D"100%" bgcol=
+or=3D"#FCFCFC" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" style=3D"b=
+order-collapse:collapse;">
+              <tr>
+                <td height=3D"35" style=3D"font-size:1px;line-height:1px;"=
+>=C2=A0</td>
+              </tr>
+              <tr>
+                <td align=3D"center" style=3D"padding:0 10px;">
+                  <table align=3D"center" class=3D"mde_600" width=3D"600"=
+ border=3D"0" cellspacing=3D"0" cellpadding=3D"0" style=3D"border-collapse=
+:collapse;">
+                    <tr>
+                      <td height=3D"15" style=3D"font-size:1px;line-height=
+:1px;">=C2=A0</td>
+                    </tr>
+                    <!-- Content -->
+                    <tr>
+                      <td align=3D"left" class=3D"desc_text1" style=3D"fon=
+t-family:'Helvetica Neue'=2C Helvetica=2C Arial=2C sans-serif;font-weight:=
+normal;color:#6B6B6B;font-size:16px;line-height:28px;">
+                        <div><p dir=3D"ltr">The next generation of Scratch=
+=2C Scratch 3.0=2C is almost here!<br>
+<br>
+As part of the Scratch 3.0 launch=2C the Scratch website (<a href=3D"https=
+://mit.us9.list-manage.com/track/click?u=3D96e741c12c99f46f1f3e95e09&id=3D=
+0878c69a9e&e=3D295c2f8fe2" target=3D"_blank" style=3D"color: #25aff4 !imp=
+ortant;font-weight: bold !important;text-decoration: none !important;">scr=
+atch.mit.edu</a>) will go into &ldquo;maintenance mode&rdquo; and will be=
+ unavailable starting at 7AM ET on January 2nd. We expect the site to be b=
+ack up by the afternoon=2C but you can follow us on <a href=3D"https://mit=
+=2Eus9.list-manage.com/track/click?u=3D96e741c12c99f46f1f3e95e09&id=3Dbc031c=
+9eda&e=3D295c2f8fe2" target=3D"_blank" style=3D"color: #25aff4 !important=
+;font-weight: bold !important;text-decoration: none !important;">Twitter</=
+a> for updates. Once the site comes back up=2C Scratch 3.0 will be officia=
+lly launched and connected to the community!<br>
+<br>
+We wanted to give you advance notice in case you would like to download th=
+e offline editor for use during this time. You can download the offline ed=
+itor here: <a href=3D"https://mit.us9.list-manage.com/track/click?u=3D96e7=
+41c12c99f46f1f3e95e09&id=3D609cb2a2ea&e=3D295c2f8fe2" target=3D"_blank" s=
+tyle=3D"color: #25aff4 !important;font-weight: bold !important;text-decora=
+tion: none !important;">scratch.mit.edu/download/</a><br>
+<br>
+<a href=3D"https://mit.us9.list-manage.com/track/click?u=3D96e741c12c99f46=
+f1f3e95e09&id=3D08e16d6067&e=3D295c2f8fe2" target=3D"_blank" style=3D"col=
+or: #25aff4 !important;font-weight: bold !important;text-decoration: none=
+ !important;">Read more about what&rsquo;s coming in Scratch 3.0</a>&nbsp;=
+<br>
+<a href=3D"https://mit.us9.list-manage.com/track/click?u=3D96e741c12c99f46=
+f1f3e95e09&id=3D8c2caa34ae&e=3D295c2f8fe2" target=3D"_blank" style=3D"col=
+or: #25aff4 !important;font-weight: bold !important;text-decoration: none=
+ !important;">Follow us on Twitter for updates</a></p>
+</div>
+                      </td>
+                    </tr>
+                    <!-- End Content -->
+                  </table>
+                </td>
+              </tr>
+              <!-- End Text area -->
+              <!-- Text area -->
+              <tr>
+                <td align=3D"center" class=3D"mde_main_td_bg">
+                  <table align=3D"center" class=3D"mde_600_bg" width=3D"10=
+0%" bgcolor=3D"#FCFCFC" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" s=
+tyle=3D"border-collapse:collapse;border-top:1px solid #F8F8F8;">
+                    <tr>
+                      <td height=3D"40" style=3D"font-size:1px;line-height=
+:1px;">=C2=A0</td>
+                    </tr>
+                    <tr>
+                      <td align=3D"center" style=3D"padding:0 10px;">
+                      </td>
+                    </tr>
+                    <!-- End Text area -->
+                  </table>
+                </td>
+              </tr>
+              <tr>
+                <td height=3D"40" style=3D"font-size:1px;line-height:1px;"=
+>=C2=A0</td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <!-- End Text area -->
+        <!-- Text &amp; Social area -->
+        <tr>
+          <td align=3D"center" class=3D"mde_main_td_bg">
+            <table align=3D"center" class=3D"mde_600_bg" width=3D"100%" bg=
+color=3D"#F7F7F7" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" style=
+=3D"border-collapse:collapse;">
+              <tr>
+                <td height=3D"60" style=3D"font-size:1px;line-height:1px;"=
+>=C2=A0</td>
+              </tr>
+              <tr>
+                <td align=3D"center" style=3D"padding:0 10px;">
+                  <table align=3D"center" class=3D"mde_600" width=3D"100%"=
+ border=3D"0" cellspacing=3D"0" cellpadding=3D"0" style=3D"border-collapse=
+:collapse;">
+                    <!-- Social -->
+                    <tr>
+                      <td align=3D"center">
+                        <table align=3D"center" class=3D"mde_social" width=
+=3D"160" border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+                          <tr>
+                            <td align=3D"center" class=3D"img_icon_td">
+                              <a href=3D"https://mit.us9.list-manage.com/t=
+rack/click?u=3D96e741c12c99f46f1f3e95e09&id=3Ddd73872e5d&e=3D295c2f8fe2"=
+ target=3D"_blank" style=3D"color: #FFFFFF !important;font-weight: bold !i=
+mportant;text-decoration: none !important;">
+                                <img src=3D"https://gallery.mailchimp.com/=
+e97f841a45c9225e11e72bf6b/images/783f9b5f-9b76-44bd-9b88-3232d7968cb6.png"=
+ alt=3D"783f9b5f-9b76-44bd-9b88-3232d7968cb6.png" border=3D"0" style=3D"ma=
+rgin: 0; padding: 0;max-width:50px; max-height:auto; display:block; border=
+:0px;" class=3D"img_icon"></a>
+                              </td>
+                              <td width=3D"2">
+                              </td>
+
+                              <td align=3D"center" class=3D"img_icon_td">
+                                <a href=3D"https://mit.us9.list-manage.com=
+/track/click?u=3D96e741c12c99f46f1f3e95e09&id=3D304c44bfb5&e=3D295c2f8fe2=
+" target=3D"_blank" style=3D"color: #FFFFFF !important;font-weight: bold !=
+important;text-decoration: none !important;">
+                                  <img src=3D"https://gallery.mailchimp.co=
+m/e97f841a45c9225e11e72bf6b/images/accd8849-23f5-4de0-9039-941070e90b7d.pn=
+g" alt=3D"accd8849-23f5-4de0-9039-941070e90b7d.png" border=3D"0" style=3D"=
+margin: 0; padding: 0;max-width:50px; max-height:auto; display:block; bord=
+er:0px;" class=3D"img_icon"></a>
+                                </td>
+                                <td width=3D"2">
+                                </td>
+
+                                <td align=3D"center" class=3D"img_icon_td"=
+>
+                                  <a href=3D"https://mit.us9.list-manage.c=
+om/track/click?u=3D96e741c12c99f46f1f3e95e09&id=3Dda937c0e40&e=3D=
+295c2f8fe2" target=3D"_blank" style=3D"color: #FFFFFF !important;font-weight: bold=
+ !important;text-decoration: none !important;">
+                                    <img src=3D"https://gallery.mailchimp.=
+com/e97f841a45c9225e11e72bf6b/images/a1da8772-8a35-42a9-9e85-683c6a862dc6.=
+png" alt=3D"a1da8772-8a35-42a9-9e85-683c6a862dc6.png" border=3D"0" style=
+=3D"margin: 0; padding: 0;max-width:50px; max-height:auto; display:block;=
+ border:0px;" class=3D"img_icon"></a>
+                                  </td>
+
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+                          <!-- Social -->
+                          <tr>
+                            <td height=3D"20" style=3D"font-size:1px;line-=
+height:1px;">=C2=A0</td>
+                          </tr>
+                          <!-- Content -->
+                          <tr>
+                            <td align=3D"center" class=3D"desc_text1" styl=
+e=3D"font-family:'Helvetica Neue'=2C Helvetica=2C Arial=2C sans-serif;font=
+-weight:normal;color:#6B6B6B;font-size:13px;line-height:26px;">
+                              <div>
+                                <a href=3D"https://mit.us9.list-manage.com=
+/track/click?u=3D96e741c12c99f46f1f3e95e09&id=3Dca8f161185&e=3D295c2f8fe2=
+" target=3D"_blank" style=3D"font-family:'Helvetica Neue'=2C Helvetica=2C=
+ Arial=2C sans-serif;font-weight:bold;color:#25aff4;font-size:14px;line-he=
+ight:26px;text-decoration:none;">
+                                  Scratch
+                                </a>
+                                is a project of the Lifelong Kindergarten=
+ Group at the MIT Media Lab
+                              </div>
+                            </td>
+                          </tr>
+                          <!-- End Content -->
+                          <tr>
+                            <td height=3D"18" style=3D"font-size:1px;line-=
+height:1px;">=C2=A0</td>
+                          </tr>
+                          <!-- Content -->
+                          <tr>
+                            <td align=3D"center" class=3D"desc_text1" styl=
+e=3D"font-family:'Helvetica Neue'=2C Helvetica=2C Arial=2C sans-serif;font=
+-weight:normal;color:#25aff4;font-size:14px;line-height:26px;">
+                              <div>
+                                <a href=3D"https://mit.us9.list-manage.com=
+/unsubscribe?u=3D96e741c12c99f46f1f3e95e09&id=3D149bd1a4c2&e=3D295c2f8fe2&c=
+=3D0b7e1c408e" target=3D"_blank" style=3D"font-family:'Helvetica Neue'=2C=
+ Helvetica=2C Arial=2C sans-serif;font-weight:bold;color:#25aff4;font-size=
+:14px;line-height:26px;text-decoration:none;">
+                                  unsubscribe from this list
+                                </a>
+                                =C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=
+=C2=A0=C2=A0
+                                <a href=3D"https://mit.us9.list-manage.com=
+/profile?u=3D96e741c12c99f46f1f3e95e09&id=3D149bd1a4c2&e=3D295c2f8fe2" targe=
+t=3D"_blank" style=3D"font-family:'Helvetica Neue'=2C Helvetica=2C Arial=
+=2C sans-serif;font-weight:bold;color:#25aff4;font-size:14px;line-height:2=
+6px;text-decoration:none;">
+                                  update subscription preferences
+                                </a>
+                              </div>
+                            </td>
+                          </tr>
+                          <!-- End Content -->
+                        </table>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td height=3D"50" style=3D"font-size:1px;line-height=
+:1px;">=C2=A0</td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+              <!-- End Text &amp; Social area -->
+              <!-- end footer -->
+            </table>
+          <img src=3D"https://mit.us9.list-manage.com/track/open.php?u=3D9=
+6e741c12c99f46f1f3e95e09&id=3D0b7e1c408e&e=3D295c2f8fe2" height=3D"1" wid=
+th=3D"1"></body>
+</html>
+--_----------=_MCPart_208167040--

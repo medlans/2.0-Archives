@@ -1,0 +1,903 @@
+Delivered-To: jaxonferrero1@gmail.com
+Received: by 2002:a02:f13:0:0:0:0:0 with SMTP id h19csp2045044jad;
+        Mon, 3 Dec 2018 05:32:07 -0800 (PST)
+X-Google-Smtp-Source: AFSGD/WkxVYCrDxjRO+Km69W7agiqDbN3XhUUY07zrT4brPvo15J8+XnQG61vF+EY/7bXNScdJo+
+X-Received: by 2002:a25:6113:: with SMTP id v19mr6241137ybb.293.1543843927683;
+        Mon, 03 Dec 2018 05:32:07 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1543843927; cv=none;
+        d=google.com; s=arc-20160816;
+        b=0CqTuQLj4M4+JRLevKIwy/LZs/3Aqq386F3GyzKiVCWflcVNFvWQi52oMnF3EctW8p
+         iLYaZ44wLkJhPAgKadzRw7IIlYpai2U3NgVHypsHhovfOcM5YtIX2AqEfw+r3pJgDEGT
+         9AGX83x2QkBVazOk4dwLI3trHZx/eN66DpFxqimSrY9uafM9o6fw+q+n9CWclImQ7obW
+         HWszeT7fh2ML0RrDpKRfnlK+k84YeH7T1chfAq0tEftf7AmMfMVa0y7c8rxcG5aP3q+Y
+         RpNH8rcWlOyR+WEBUh7+ChCzRp98zn+1S9Xq9KfNmf3974U3hQ4gIXjZosvG+q32pgoh
+         nsuw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=mime-version:list-unsubscribe-post:list-unsubscribe:list-id
+         :feedback-id:message-id:date:to:reply-to:from:subject:dkim-signature
+         :dkim-signature;
+        bh=4WpoL/t/EIA74fPpgJSRJMisSUpwBmmCc2WYRT5JOVQ=;
+        b=xdXNvFTxfY3rMAm6zDYE+DjX8kRe71e2m76cb35R90mpnaZPUtx2Glp20XcM5/7liI
+         +ARp9/eCdPlzvnZTT0MWH24tgEW5Bb5czc7KBetDa9qhbPoaWjwXHGi8tMeCslcWK/ZK
+         dqSUMa0oX7IVhmuO/a7+kiDEFZ9AyftPRc9NZHxka88FnYuq3adu1OVpACtb0ZOgPcye
+         H0NsmWFiMs47RJ0zikjO3YbHANnrrjOpAkXam1daKDnp68x3cvxiA+GPxvwBgkwSDdCI
+         qlKX0aITOdUGXsvuWOJvFyYrfgflht/XRmaMdiNp4b2zHXYY46hgdcbGeh5DGLeq8jU9
+         YK/w==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.mcsv.net header.s=k1 header.b=O7zH6I3g;
+       dkim=pass header.i=@mailchimpapp.net header.s=k1 header.b=vUFMIKEW;
+       spf=pass (google.com: domain of bounce-mc.us9_36847697.900437-jaxonferrero1=gmail.com@mail114.sea91.rsgsv.net designates 148.105.15.114 as permitted sender) smtp.mailfrom="bounce-mc.us9_36847697.900437-jaxonferrero1=gmail.com@mail114.sea91.rsgsv.net"
+Return-Path: <bounce-mc.us9_36847697.900437-jaxonferrero1=gmail.com@mail114.sea91.rsgsv.net>
+Received: from mail114.sea91.rsgsv.net (mail114.sea91.rsgsv.net. [148.105.15.114])
+        by mx.google.com with ESMTPS id 203si7570674ybg.474.2018.12.03.05.32.07
+        for <jaxonferrero1@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Mon, 03 Dec 2018 05:32:07 -0800 (PST)
+Received-SPF: pass (google.com: domain of bounce-mc.us9_36847697.900437-jaxonferrero1=gmail.com@mail114.sea91.rsgsv.net designates 148.105.15.114 as permitted sender) client-ip=148.105.15.114;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.mcsv.net header.s=k1 header.b=O7zH6I3g;
+       dkim=pass header.i=@mailchimpapp.net header.s=k1 header.b=vUFMIKEW;
+       spf=pass (google.com: domain of bounce-mc.us9_36847697.900437-jaxonferrero1=gmail.com@mail114.sea91.rsgsv.net designates 148.105.15.114 as permitted sender) smtp.mailfrom="bounce-mc.us9_36847697.900437-jaxonferrero1=gmail.com@mail114.sea91.rsgsv.net"
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.mcsv.net;
+	s=k1; t=1543843878; bh=4WpoL/t/EIA74fPpgJSRJMisSUpwBmmCc2WYRT5JOVQ=;
+	h=Subject:From:Reply-To:To:Date:Message-ID:Feedback-ID:List-ID:
+	 List-Unsubscribe:Content-Type:MIME-Version;
+	b=O7zH6I3gX9K+X6aTFEWVh//gPLOZvGcZJQYTHHAWCcWa0OY6LuvqEvdtokkUTdeBM
+	 Ah4jhVChLITJk6qdgMk1n59bQY93l00PTqrmoPKEuZjssOX9+7w+zwXXHJync6qSKY
+	 U3ku9DAN9r4nefutIMvdxyvp4LV/ACahAOTu8Exw=
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=mailchimpapp.net;
+	s=k1; t=1543843878; bh=4WpoL/t/EIA74fPpgJSRJMisSUpwBmmCc2WYRT5JOVQ=;
+	h=Subject:From:Reply-To:To:Date:Message-ID:List-ID:List-Unsubscribe:
+	 Content-Type:MIME-Version;
+	b=vUFMIKEWpT9gDPHwe4F21NqbKFzNevfGOH8uZavc83UBCFtI7DAkJFiHeHmJs4Ajt
+	 lim8y4LgoIZqcxclG403hmH3Zq5JZGy6LchvhVGRgUO3x47XEpF+s8gPzKFjsEo3Ox
+	 718HveackJUSUJbjg7oPyzXzJRyY5OK/jaUhghdM=
+Received: from localhost (localhost [127.0.0.1])
+	by mail114.sea91.rsgsv.net (MailChimp) with ESMTP id 437m9L0RDLzLfJ4vc
+	for <jaxonferrero1@gmail.com>; Mon,  3 Dec 2018 13:31:18 +0000 (GMT)
+x-mcpf-jobid: mc.us9_36847697.900437.5c052fdcebf51.full_000001
+Subject: =?utf-8?Q?Get=20creative=20with=20Scratch=20for=20Computer=20Science=20Education=20Week=21=C2=A0=F0=9F=98=BA?=
+From: =?utf-8?Q?The=20Scratch=20Team?= <no-reply@scratch.mit.edu>
+Reply-To: =?utf-8?Q?The=20Scratch=20Team?= <no-reply@scratch.mit.edu>
+To: <jaxonferrero1@gmail.com>
+Date: Mon,  3 Dec 2018 13:31:13 +0000
+Message-ID: <96e741c12c99f46f1f3e95e09.295c2f8fe2.20181203133025.9666f1c6d4.7b4bac96@mail114.sea91.rsgsv.net>
+X-Mailer: MailChimp Mailer - **CID9666f1c6d4295c2f8fe2**
+X-Campaign: mailchimp96e741c12c99f46f1f3e95e09.9666f1c6d4
+X-campaignid: mailchimp96e741c12c99f46f1f3e95e09.9666f1c6d4
+X-Report-Abuse: Please report abuse for this campaign here: https://mailchimp.com/contact/abuse/?u=96e741c12c99f46f1f3e95e09&id=9666f1c6d4&e=295c2f8fe2
+X-MC-User: 96e741c12c99f46f1f3e95e09
+Feedback-ID: 36847697:36847697.900437:us9:mc
+List-ID: 96e741c12c99f46f1f3e95e09mc list <96e741c12c99f46f1f3e95e09.588965.list-id.mcsv.net>
+X-Accounttype: pd
+List-Unsubscribe: <https://mit.us9.list-manage.com/unsubscribe?u=96e741c12c99f46f1f3e95e09&id=149bd1a4c2&e=295c2f8fe2&c=9666f1c6d4>, <mailto:unsubscribe-mc.us9_96e741c12c99f46f1f3e95e09.9666f1c6d4-295c2f8fe2@mailin.mcsv.net?subject=unsubscribe>
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+Content-Type: multipart/alternative; boundary="_----------=_MCPart_1919048176"
+MIME-Version: 1.0
+
+This is a multi-part message in MIME format
+
+--_----------=_MCPart_1919048176
+Content-Type: text/plain; charset="utf-8"; format="fixed"
+Content-Transfer-Encoding: quoted-printable
+
+https://scratch.mit.edu/?mc_cid=3D9666f1c6d4&mc_eid=3D[UNIQID]
+
+
+view in browser (https://mailchi.mp/scratch/get-creative-with-scratch-for-=
+computer-science-education-week?e=3D295c2f8fe2)
+
+
+
+Celebrate CSEdWeek with Scratch 3.0!
+
+
+
+This year=2C Scratch is featuring two new creative coding activities=2C pr=
+oviding kids with opportunities to create imaginative projects based on th=
+eir interests.
+
+In anticipation of the official release of Scratch 3.0 on January 2=2C 201=
+9=2C we=E2=80=99re inviting everyone to create projects using the Beta ver=
+sion of Scratch 3.0 (http://beta.scratch.mit.edu?mc_cid=3D9666f1c6d4&mc_ei=
+d=3D[UNIQID]) !
+
+Create Animations That Talk (https://beta.scratch.mit.edu/?tutorial=3Danim=
+ations-that-talk&mc_cid=3D9666f1c6d4&mc_eid=3D[UNIQID])
+https://beta.scratch.mit.edu/?tutorial=3Danimations-that-talk&mc_cid=3D966=
+6f1c6d4&mc_eid=3D[UNIQID]
+Bring characters to life in Scratch using new Text-to-Speech blocks powere=
+d by Amazon Web Services. This project will show you how to create talking=
+ animations that spin=2C zoom=2C and change colors. The possibilities are=
+ endless!
+
+Animate an Adventure Game (https://beta.scratch.mit.edu/?tutorial=3Danimat=
+e-an-adventure-game&mc_cid=3D9666f1c6d4&mc_eid=3D[UNIQID])
+https://beta.scratch.mit.edu/?tutorial=3Danimate-an-adventure-game&mc_cid=
+=3D9666f1c6d4&mc_eid=3D[UNIQID]
+
+Send your favorite Cartoon Network characters on a quest=2C from the farth=
+est reaches of the universe to the edge of Craig's creek. Unlock secret tr=
+easures and discover new characters while creating an adventure game.
+
+Looking for CSEdWeek ideas using Scratch 2.0? Visit theTips page (https://=
+scratch.mit.edu/tips?mc_cid=3D9666f1c6d4&mc_eid=3D[UNIQID]) for starter p=
+rojects=2C activity cards=2C tutorials=2C educator guides=2C and more.
+
+
+
+https://www.facebook.com/scratchteam/?mc_cid=3D9666f1c6d4&mc_eid=3D[UNIQI=
+D] https://twitter.com/scratch?mc_cid=3D9666f1c6d4&mc_eid=3D[UNIQID] http=
+s://medium.com/scratchfoundation-blog?mc_cid=3D9666f1c6d4&mc_eid=3D[UNIQI=
+D]
+
+Scratch (https://scratch.mit.edu/?mc_cid=3D9666f1c6d4&mc_eid=3D[UNIQID])=
+ is a project of the Lifelong Kindergarten Group at the MIT Media Lab
+
+unsubscribe from this list (https://mit.us9.list-manage.com/unsubscribe?u=
+=3D96e741c12c99f46f1f3e95e09&id=3D149bd1a4c2&e=3D295c2f8fe2&c=3D9666f1c6d4)=
+           update subscription preferences (https://mit.us9.list-manage.co=
+m/profile?u=3D96e741c12c99f46f1f3e95e09&id=3D149bd1a4c2&e=3D295c2f8fe2)
+--_----------=_MCPart_1919048176
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www=
+=2Ew3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns=3D"http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv=3D"content-type" content=3D"text/html; charset=3Dutf-=
+8">
+    <meta name=3D"viewport" content=3D"width=3Ddevice-width=2C initial-sca=
+le=3D1=2C minimum-scale=3D1=2C maximum-scale=3D1">
+    <title>Get creative with Scratch for Computer Science Education Week!=
+=C2=A0=F0=9F=98=BA</title>
+
+  <style type=3D"text/css">
+=09=09body{
+=09=09=09width:100%;
+=09=09=09background-color:#FCFCFC;
+=09=09=09margin:0;
+=09=09=09padding:0;
+=09=09=09-webkit-font-smoothing:antialiased;
+=09=09=09mso-margin-top-alt:0;
+=09=09=09mso-margin-bottom-alt:0;
+=09=09=09mso-padding-alt:0 0 0 0;
+=09=09=09-webkit-text-size-adjust:none;
+=09=09}
+=09=09a{
+=09=09=09color:#FFFFFF !important;
+=09=09=09font-weight:bold !important;
+=09=09=09text-decoration:none !important;
+=09=09}
+=09=09td a{
+=09=09=09color:#FFFFFF !important;
+=09=09=09font-weight:bold !important;
+=09=09=09text-decoration:none !important;
+=09=09}
+=09=09td.title_text1{
+=09=09=09color:#6B6B6B !important;
+=09=09=09font-weight:normal !important;
+=09=09}
+=09=09td.title_text1 a{
+=09=09=09color:#25aff4 !important;
+=09=09=09font-weight:bold !important;
+=09=09=09text-decoration:none !important;
+=09=09}
+=09=09td.desc_text1{
+=09=09=09color:#6B6B6B !important;
+=09=09=09font-weight:normal !important;
+=09=09}
+=09=09td.desc_text1 a{
+=09=09=09color:#25aff4 !important;
+=09=09=09font-weight:bold !important;
+=09=09=09text-decoration:none !important;
+=09=09}
+=09=09td.mde_button1{
+=09=09=09color:#FFFFFF !important;
+=09=09=09font-weight:normal !important;
+=09=09}
+=09=09td.mde_button1 a{
+=09=09=09color:#FFFFFF !important;
+=09=09=09font-weight:bold !important;
+=09=09=09text-decoration:none !important;
+=09=09}
+=09=09.mde_button1 a{
+=09=09=09font-size:13px !important;
+=09=09=09line-height:13px !important;
+=09=09=09color:#FFFFFF !important;
+=09=09=09text-decoration:none !important;
+=09=09}
+=09=09a.mde_button1{
+=09=09=09font-size:13px !important;
+=09=09=09line-height:13px !important;
+=09=09=09color:#FFFFFF !important;
+=09=09=09text-decoration:none !important;
+=09=09}
+=09=09a.mde_button1 span{
+=09=09=09font-size:13px !important;
+=09=09=09line-height:13px !important;
+=09=09=09color:#FFFFFF !important;
+=09=09}
+=09=09span{
+=09=09=09font-size:13px !important;
+=09=09=09line-height:13px !important;
+=09=09=09color:#FFFFFF !important;
+=09=09}
+=09@media only screen and (max-width: 640px){
+=09=09[class=3Dmde_main_td]{
+=09=09=09min-width:100% !important;
+=09=09}
+
+}=09@media only screen and (max-width: 640px){
+=09=09[class=3Dmde_600]{
+=09=09=09width:440px !important;
+=09=09}
+
+}=09@media only screen and (max-width: 640px){
+=09=09[class=3Dmde_600_border]{
+=09=09=09width:440px !important;
+=09=09}
+
+}=09@media only screen and (max-width: 640px){
+=09=09[class=3Dmde_550]{
+=09=09=09width:400px !important;
+=09=09}
+
+}=09@media only screen and (max-width: 640px){
+=09=09[class=3Dmde_main_td_bg]{
+=09=09=09min-width:100% !important;
+=09=09}
+
+}=09@media only screen and (max-width: 640px){
+=09=09[class=3Dmde_600_bg]{
+=09=09=09min-width:100% !important;
+=09=09}
+
+}=09@media only screen and (max-width: 640px){
+=09=09[class=3Dmde_social]{
+=09=09=09width:160px !important;
+=09=09}
+
+}=09@media only screen and (max-width: 640px){
+=09=09[class=3Dmde_600_banner]{
+=09=09=09width:440px !important;
+=09=09}
+
+}=09@media only screen and (max-width: 640px){
+=09=09[class=3Dmde_section2]{
+=09=09=09width:100% !important;
+=09=09}
+
+}=09@media only screen and (max-width: 640px){
+=09=09[class=3Dmde_section2_space]{
+=09=09=09width:1px !important;
+=09=09=09height:20px !important;
+=09=09}
+
+}=09@media only screen and (max-width: 640px){
+=09=09[class=3Dmde_section2a]{
+=09=09=09width:75px !important;
+=09=09}
+
+}=09@media only screen and (max-width: 640px){
+=09=09[class=3Dmde_section2b]{
+=09=09=09width:150px !important;
+=09=09}
+
+}=09@media only screen and (max-width: 640px){
+=09=09[class=3Dles_height1]{
+=09=09=09height:40px !important;
+=09=09}
+
+}=09@media only screen and (max-width: 640px){
+=09=09[class=3Dmde_section3]{
+=09=09=09width:100% !important;
+=09=09}
+
+}=09@media only screen and (max-width: 640px){
+=09=09[class=3Dmde_section3_space]{
+=09=09=09width:1px !important;
+=09=09=09height:20px !important;
+=09=09}
+
+}=09@media only screen and (max-width: 640px){
+=09=09[class=3Dmde_section2a_image] img{
+=09=09=09width:75px !important;
+=09=09=09height:auto !important;
+=09=09}
+
+}=09@media only screen and (max-width: 640px){
+=09=09[class=3Dmde_banner_image] img{
+=09=09=09width:100% !important;
+=09=09=09height:auto !important;
+=09=09}
+
+}=09@media only screen and (max-width: 640px){
+=09=09[class=3Dmde_section2_image] img{
+=09=09=09width:100% !important;
+=09=09=09height:auto !important;
+=09=09}
+
+}=09@media only screen and (max-width: 640px){
+=09=09[class=3Dmde_section3_image] img{
+=09=09=09width:100% !important;
+=09=09=09height:auto !important;
+=09=09}
+
+}=09@media only screen and (max-width: 640px){
+=09=09[class=3Dmde_section2_image_200_400] img{
+=09=09=09width:100% !important;
+=09=09=09height:auto !important;
+=09=09=09min-width:100% !important;
+=09=09=09max-width:100% !important;
+=09=09}
+
+}=09@media only screen and (max-width: 640px){
+=09=09[class=3Dview_in_browser]{
+=09=09=09font-size:12px !important;
+=09=09=09line-height:18px !important;
+=09=09=09text-align:right !important;
+=09=09}
+
+}=09@media only screen and (max-width: 640px){
+=09=09[class=3Dview_in_browser] a{
+=09=09=09font-size:12px !important;
+=09=09=09line-height:18px !important;
+=09=09=09text-decoration:underline !important;
+=09=09=09text-align:right !important;
+=09=09}
+
+}=09@media only screen and (max-width: 640px){
+=09=09[class=3Dmde_button1_tbl]{
+=09=09=09width:200px !important;
+=09=09=09height:31px !important;
+=09=09}
+
+}=09@media only screen and (max-width: 640px){
+=09=09[class=3Dmde_button1]{
+=09=09=09text-decoration:none !important;
+=09=09}
+
+}=09@media only screen and (max-width: 640px){
+=09=09[class=3Dmde_button1] a{
+=09=09=09text-decoration:none !important;
+=09=09}
+
+}=09@media only screen and (max-width: 479px){
+=09=09[class=3Dmde_main_td]{
+=09=09=09min-width:100% !important;
+=09=09}
+
+}=09@media only screen and (max-width: 479px){
+=09=09[class=3Dmde_600]{
+=09=09=09width:95% !important;
+=09=09}
+
+}=09@media only screen and (max-width: 479px){
+=09=09[class=3Dmde_600_border]{
+=09=09=09width:86% !important;
+=09=09}
+
+}=09@media only screen and (max-width: 479px){
+=09=09[class=3Dmde_550]{
+=09=09=09width:95% !important;
+=09=09}
+
+}=09@media only screen and (max-width: 479px){
+=09=09[class=3Dmde_main_td_bg]{
+=09=09=09min-width:100% !important;
+=09=09}
+
+}=09@media only screen and (max-width: 479px){
+=09=09[class=3Dmde_600_bg]{
+=09=09=09min-width:100% !important;
+=09=09}
+
+}=09@media only screen and (max-width: 479px){
+=09=09[class=3Dmde_social]{
+=09=09=09width:160px !important;
+=09=09}
+
+}=09@media only screen and (max-width: 479px){
+=09=09[class=3Dmde_600_banner]{
+=09=09=09width:95% !important;
+=09=09}
+
+}=09@media only screen and (max-width: 479px){
+=09=09[class=3Dmde_section2]{
+=09=09=09width:100% !important;
+=09=09}
+
+}=09@media only screen and (max-width: 479px){
+=09=09[class=3Dmde_section2_space]{
+=09=09=09width:1px !important;
+=09=09=09height:20px !important;
+=09=09}
+
+}=09@media only screen and (max-width: 479px){
+=09=09[class=3Dmde_section2a]{
+=09=09=09width:100% !important;
+=09=09}
+
+}=09@media only screen and (max-width: 479px){
+=09=09[class=3Dmde_section2b]{
+=09=09=09width:100% !important;
+=09=09}
+
+}=09@media only screen and (max-width: 479px){
+=09=09[class=3Dles_height1]{
+=09=09=09height:20px !important;
+=09=09}
+
+}=09@media only screen and (max-width: 479px){
+=09=09[class=3Dmde_section3]{
+=09=09=09width:100% !important;
+=09=09}
+
+}=09@media only screen and (max-width: 479px){
+=09=09[class=3Dmde_section3_space]{
+=09=09=09width:1px !important;
+=09=09=09height:20px !important;
+=09=09}
+
+}=09@media only screen and (max-width: 479px){
+=09=09[class=3Dmde_section2a_image] img{
+=09=09=09width:100% !important;
+=09=09=09height:auto !important;
+=09=09}
+
+}=09@media only screen and (max-width: 479px){
+=09=09[class=3Dmde_banner_image] img{
+=09=09=09width:100% !important;
+=09=09=09height:auto !important;
+=09=09}
+
+}=09@media only screen and (max-width: 479px){
+=09=09[class=3Dmde_section2_image] img{
+=09=09=09width:100% !important;
+=09=09=09height:auto !important;
+=09=09}
+
+}=09@media only screen and (max-width: 479px){
+=09=09[class=3Dmde_section3_image] img{
+=09=09=09width:100% !important;
+=09=09=09height:auto !important;
+=09=09}
+
+}=09@media only screen and (max-width: 479px){
+=09=09[class=3Dmde_section2_image_200_400] img{
+=09=09=09width:100% !important;
+=09=09=09height:auto !important;
+=09=09=09min-width:100% !important;
+=09=09=09max-width:100% !important;
+=09=09}
+
+}=09@media only screen and (max-width: 479px){
+=09=09[class=3Dview_in_browser]{
+=09=09=09font-size:12px !important;
+=09=09=09line-height:38px !important;
+=09=09=09text-align:center !important;
+=09=09}
+
+}=09@media only screen and (max-width: 479px){
+=09=09[class=3Dview_in_browser] a{
+=09=09=09font-size:12px !important;
+=09=09=09line-height:38px !important;
+=09=09=09text-decoration:underline !important;
+=09=09=09text-align:center !important;
+=09=09}
+
+}=09@media only screen and (max-width: 479px){
+=09=09[class=3Dmde_button1_tbl]{
+=09=09=09width:180px !important;
+=09=09=09height:31px !important;
+=09=09}
+
+}=09@media only screen and (max-width: 479px){
+=09=09[class=3Dmde_button1]{
+=09=09=09text-decoration:none !important;
+=09=09}
+
+}=09@media only screen and (max-width: 479px){
+=09=09[class=3Dmde_button1] a{
+=09=09=09text-decoration:none !important;
+=09=09}
+
+}</style></head>
+  <body style=3D"width: 100%;background-color: #FCFCFC;margin: 0;padding:=
+ 0;-webkit-font-smoothing: antialiased;mso-margin-top-alt: 0;mso-margin-bo=
+ttom-alt: 0;mso-padding-alt: 0 0 0 0;-webkit-text-size-adjust: none;">
+    <table width=3D"100%" border=3D"0" align=3D"center" cellpadding=3D"0"=
+ cellspacing=3D"0" bgcolor=3D"#FCFCFC" style=3D"background-position:top;ba=
+ckground-repeat:repeat-x;">
+      <!-- 2 Section Left and Right -->
+      <tr>
+        <td align=3D"center" class=3D"mde_main_td_bg" style=3D"min-width:1=
+00%;">
+          <table align=3D"center" class=3D"mde_600_bg" width=3D"100%" bgco=
+lor=3D"#25AFF4" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" style=3D"=
+border-collapse:collapse;">
+            <tr>
+              <td align=3D"center" style=3D"padding:0 10px;">
+                <table align=3D"center" class=3D"mde_600" width=3D"600" bo=
+rder=3D"0" cellspacing=3D"0" cellpadding=3D"0" style=3D"border-collapse:co=
+llapse;">
+                  <tr>
+                    <td height=3D"20" style=3D"font-size:1px;line-height:1=
+px;">=C2=A0</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <!-- Section Content -->
+                      <table align=3D"left" class=3D"mde_section2a" width=
+=3D"75" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" style=3D"border-c=
+ollapse:collapse;">
+                        <!-- Image -->
+                        <tr>
+                          <td align=3D"center" class=3D"mde_section2a_imag=
+e">
+                            <a href=3D"https://mit.us9.list-manage.com/tra=
+ck/click?u=3D96e741c12c99f46f1f3e95e09&id=3D30aa58e8e4&e=3D295c2f8fe2" ta=
+rget=3D"_blank" style=3D"color: #FFFFFF !important;font-weight: bold !impo=
+rtant;text-decoration: none !important;">
+                              <img src=3D"https://gallery.mailchimp.com/e9=
+7f841a45c9225e11e72bf6b/images/c47d0a01-3a3c-4ff4-aea6-39813f46802b.png" a=
+lt=3D"Logo" border=3D"0" style=3D"margin: 0; padding: 0;max-width:70px; ma=
+x-height:auto; display:block; border:0px;"></a>
+                            </td>
+                          </tr>
+                          <!-- End Image -->
+                        </table>
+                        <!-- End Section Content -->
+                        <!-- Section Space -->
+                        <table align=3D"left" class=3D"mde_section2_spacea=
+" width=3D"2" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" style=3D"bo=
+rder-collapse:collapse;">
+                          <tr>
+                            <td>
+
+                            </td>
+                          </tr>
+                        </table>
+                        <!-- End Section Space -->
+                        <!-- Section Content -->
+                        <table align=3D"right" class=3D"mde_section2b" wid=
+th=3D"200" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" style=3D"borde=
+r-collapse:collapse;">
+                          <tr>
+                            <td height=3D"4" class=3D"section_height" styl=
+e=3D"font-size:2px;line-height:2px;">=C2=A0</td>
+                          </tr>
+                          <!-- Content -->
+                          <tr>
+                            <td align=3D"right" class=3D"view_in_browser"=
+ style=3D"font-family:'Helvetica Neue'=2C Helvetica=2C Arial=2C sans-serif=
+;font-weight:normal;color:#25aff4;font-size:12px;line-height:18px;">
+                              <div>
+                                <a href=3D"https://mailchi.mp/scratch/get-=
+creative-with-scratch-for-computer-science-education-week?e=3D295c2f8fe2" ta=
+rget=3D"_blank" class=3D"view_in_browser" style=3D"font-family:'Helvetica=
+ Neue'=2C Helvetica=2C Arial=2C sans-serif;font-weight:bold;color:#FFFFFF=
+ !important;font-size:12px;line-height:18px;text-decoration:none;">
+                                  view in browser
+                                </a>
+                              </div>
+                            </td>
+                          </tr>
+                          <!-- End Content -->
+                        </table>
+                        <!-- End Section Content -->
+                      </td>
+                    </tr>
+                    <tr>
+                      <td height=3D"65" class=3D"les_height1" style=3D"fon=
+t-size:1px;line-height:1px;">=C2=A0</td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <!-- End 2 Section Left and Right -->
+        <!-- Text area -->
+        <tr>
+          <td align=3D"center" class=3D"mde_main_td_bg" style=3D"max-width=
+:100%;">
+            <table align=3D"center" class=3D"mde_600_bg" width=3D"100%" bg=
+color=3D"#25AFF4" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" style=
+=3D"border-collapse:collapse;">
+              <tr>
+                <td height=3D"2" style=3D"font-size:1px;line-height:1px;">=
+=C2=A0</td>
+              </tr>
+              <tr>
+                <td align=3D"center" style=3D"padding:0 10px;">
+                  <table align=3D"center" class=3D"mde_600" width=3D"600"=
+ border=3D"0" cellspacing=3D"0" cellpadding=3D"0" style=3D"border-collapse=
+:collapse;">
+                    <!-- Content -->
+                    <tr>
+                      <td align=3D"center" class=3D"title_text1" style=3D"=
+font-family:'Helvetica Neue'=2C Helvetica=2C Arial=2C sans-serif;font-weig=
+ht:bold;color:#FFFFFF !important;font-size:24px;line-height:28px;">
+                        <div><strong>Celebrate CSEdWeek with Scratch 3.0!<=
+/strong></div>
+                      </td>
+                    </tr>
+                    <!-- End Content -->
+                  </table>
+                </td>
+              </tr>
+              <tr>
+                <td height=3D"60" style=3D"font-size:1px;line-height:1px;"=
+>=C2=A0</td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <!-- End Text area -->
+        <!-- Banner 600 Image -->
+        <tr>
+          <td align=3D"center" class=3D"mde_main_td" style=3D"min-width:10=
+0%;">
+            <table align=3D"center" class=3D"mde_600_banner" width=3D"100%=
+" bgcolor=3D"#FCFCFC" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" sty=
+le=3D"border-collapse:collapse;border-top:1px solid #F6F6F6;">
+              <tr>
+                <td align=3D"center" style=3D"padding:0 10px;">
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <!-- End Banner 600 Image -->
+        <!-- Text area -->
+        <tr>
+          <td align=3D"center" class=3D"mde_main_td" style=3D"min-width:60=
+0px;">
+            <table align=3D"center" class=3D"mde_600" width=3D"100%" bgcol=
+or=3D"#FCFCFC" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" style=3D"b=
+order-collapse:collapse;">
+              <tr>
+                <td height=3D"35" style=3D"font-size:1px;line-height:1px;"=
+>=C2=A0</td>
+              </tr>
+              <tr>
+                <td align=3D"center" style=3D"padding:0 10px;">
+                  <table align=3D"center" class=3D"mde_600" width=3D"600"=
+ border=3D"0" cellspacing=3D"0" cellpadding=3D"0" style=3D"border-collapse=
+:collapse;">
+                    <tr>
+                      <td height=3D"15" style=3D"font-size:1px;line-height=
+:1px;">=C2=A0</td>
+                    </tr>
+                    <!-- Content -->
+                    <tr>
+                      <td align=3D"left" class=3D"desc_text1" style=3D"fon=
+t-family:'Helvetica Neue'=2C Helvetica=2C Arial=2C sans-serif;font-weight:=
+normal;color:#6B6B6B;font-size:16px;line-height:28px;">
+                        <div><p dir=3D"ltr">This year=2C Scratch is featur=
+ing two new creative coding activities=2C providing kids with opportunitie=
+s to create imaginative projects based on their interests.<br>
+<br>
+In anticipation of the official release of Scratch 3.0 on January 2=2C&nbs=
+p;2019=2C we&rsquo;re inviting everyone to create projects using the <a hr=
+ef=3D"https://mit.us9.list-manage.com/track/click?u=3D96e741c12c99f46f1f3e=
+95e09&id=3D5fb71d8c80&e=3D295c2f8fe2" style=3D"color: #25aff4 !important;=
+font-weight: bold !important;text-decoration: none !important;">Beta versi=
+on of Scratch 3.0</a>!<br>
+<br>
+<u><strong><big><a href=3D"https://mit.us9.list-manage.com/track/click?u=
+=3D96e741c12c99f46f1f3e95e09&id=3Dd38c23f0b5&e=3D295c2f8fe2" style=3D"col=
+or: #25aff4 !important;font-weight: bold !important;text-decoration: none=
+ !important;">Create Animations That Talk</a></big></strong></u><br>
+<big><a href=3D"https://mit.us9.list-manage.com/track/click?u=3D96e741c12c=
+99f46f1f3e95e09&id=3D424941ada9&e=3D295c2f8fe2" target=3D"_blank" style=
+=3D"color: #25aff4 !important;font-weight: bold !important;text-decoration=
+: none !important;"><img data-file-id=3D"1049009" height=3D"337" src=3D"ht=
+tps://gallery.mailchimp.com/96e741c12c99f46f1f3e95e09/images/9d2bc36c-db72=
+-4886-973a-9ec6ac74d7f6.png" style=3D"border: 0px  ; width: 600px; height:=
+ 337px; margin: 0px;" width=3D"600"></a></big><br>
+Bring characters to life in Scratch using new Text-to-Speech blocks powere=
+d by Amazon Web Services. This project will show you how to create talking=
+ animations that spin=2C zoom=2C and change colors. The possibilities are=
+ endless!<br>
+&nbsp;</p>
+
+<p dir=3D"ltr"><u><strong><big><a href=3D"https://mit.us9.list-manage.com/=
+track/click?u=3D96e741c12c99f46f1f3e95e09&id=3Db1f9d77592&e=3D295c2f8fe2"=
+ style=3D"color: #25aff4 !important;font-weight: bold !important;text-deco=
+ration: none !important;">Animate an Adventure Game</a><br>
+<a href=3D"https://mit.us9.list-manage.com/track/click?u=3D96e741c12c99f46=
+f1f3e95e09&id=3D289e35535a&e=3D295c2f8fe2" target=3D"_blank" style=3D"col=
+or: #25aff4 !important;font-weight: bold !important;text-decoration: none=
+ !important;"><img data-file-id=3D"1049013" height=3D"337" src=3D"https://=
+gallery.mailchimp.com/96e741c12c99f46f1f3e95e09/images/42f40414-19a7-4c19-=
+a4c9-5a3f5d57b8a8.png" style=3D"border: 0px  ; width: 600px; height: 337px=
+; margin: 0px;" width=3D"600"></a></big></strong></u></p>
+
+<p dir=3D"ltr">Send your favorite Cartoon Network characters on a quest=2C=
+ from the farthest reaches of the universe to the edge of Craig&#39;s cree=
+k. Unlock secret treasures and discover new characters while creating an a=
+dventure game.<br>
+<br>
+<br>
+<em>Looking for CSEdWeek ideas using Scratch 2.0? Visit the<a href=3D"http=
+s://mit.us9.list-manage.com/track/click?u=3D96e741c12c99f46f1f3e95e09&id=
+=3D9ed4d7a06f&e=3D295c2f8fe2" style=3D"color: #25aff4 !important;font-wei=
+ght: bold !important;text-decoration: none !important;"> Tips page</a> for=
+ starter projects=2C activity cards=2C tutorials=2C educator guides=2C and=
+ more.</em><strong> </strong></p>
+</div>
+                      </td>
+                    </tr>
+                    <!-- End Content -->
+                  </table>
+                </td>
+              </tr>
+              <!-- End Text area -->
+              <!-- Text area -->
+              <tr>
+                <td align=3D"center" class=3D"mde_main_td_bg">
+                  <table align=3D"center" class=3D"mde_600_bg" width=3D"10=
+0%" bgcolor=3D"#FCFCFC" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" s=
+tyle=3D"border-collapse:collapse;border-top:1px solid #F8F8F8;">
+                    <tr>
+                      <td height=3D"40" style=3D"font-size:1px;line-height=
+:1px;">=C2=A0</td>
+                    </tr>
+                    <tr>
+                      <td align=3D"center" style=3D"padding:0 10px;">
+                      </td>
+                    </tr>
+                    <!-- End Text area -->
+                  </table>
+                </td>
+              </tr>
+              <tr>
+                <td height=3D"40" style=3D"font-size:1px;line-height:1px;"=
+>=C2=A0</td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <!-- End Text area -->
+        <!-- Text &amp; Social area -->
+        <tr>
+          <td align=3D"center" class=3D"mde_main_td_bg">
+            <table align=3D"center" class=3D"mde_600_bg" width=3D"100%" bg=
+color=3D"#F7F7F7" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" style=
+=3D"border-collapse:collapse;">
+              <tr>
+                <td height=3D"60" style=3D"font-size:1px;line-height:1px;"=
+>=C2=A0</td>
+              </tr>
+              <tr>
+                <td align=3D"center" style=3D"padding:0 10px;">
+                  <table align=3D"center" class=3D"mde_600" width=3D"100%"=
+ border=3D"0" cellspacing=3D"0" cellpadding=3D"0" style=3D"border-collapse=
+:collapse;">
+                    <!-- Social -->
+                    <tr>
+                      <td align=3D"center">
+                        <table align=3D"center" class=3D"mde_social" width=
+=3D"160" border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+                          <tr>
+                            <td align=3D"center" class=3D"img_icon_td">
+                              <a href=3D"https://mit.us9.list-manage.com/t=
+rack/click?u=3D96e741c12c99f46f1f3e95e09&id=3D583453352a&e=3D295c2f8fe2"=
+ target=3D"_blank" style=3D"color: #FFFFFF !important;font-weight: bold !i=
+mportant;text-decoration: none !important;">
+                                <img src=3D"https://gallery.mailchimp.com/=
+e97f841a45c9225e11e72bf6b/images/783f9b5f-9b76-44bd-9b88-3232d7968cb6.png"=
+ alt=3D"783f9b5f-9b76-44bd-9b88-3232d7968cb6.png" border=3D"0" style=3D"ma=
+rgin: 0; padding: 0;max-width:50px; max-height:auto; display:block; border=
+:0px;" class=3D"img_icon"></a>
+                              </td>
+                              <td width=3D"2">
+                              </td>
+
+                              <td align=3D"center" class=3D"img_icon_td">
+                                <a href=3D"https://mit.us9.list-manage.com=
+/track/click?u=3D96e741c12c99f46f1f3e95e09&id=3Db0f6323d55&e=3D295c2f8fe2=
+" target=3D"_blank" style=3D"color: #FFFFFF !important;font-weight: bold !=
+important;text-decoration: none !important;">
+                                  <img src=3D"https://gallery.mailchimp.co=
+m/e97f841a45c9225e11e72bf6b/images/accd8849-23f5-4de0-9039-941070e90b7d.pn=
+g" alt=3D"accd8849-23f5-4de0-9039-941070e90b7d.png" border=3D"0" style=3D"=
+margin: 0; padding: 0;max-width:50px; max-height:auto; display:block; bord=
+er:0px;" class=3D"img_icon"></a>
+                                </td>
+                                <td width=3D"2">
+                                </td>
+
+                                <td align=3D"center" class=3D"img_icon_td"=
+>
+                                  <a href=3D"https://mit.us9.list-manage.c=
+om/track/click?u=3D96e741c12c99f46f1f3e95e09&id=3D6081e1e10c&e=3D295c2f8fe2" target=3D"_blank" style=3D"color: #FFFFFF !important;font-weight: bold=
+ !important;text-decoration: none !important;">
+                                    <img src=3D"https://gallery.mailchimp.=
+com/e97f841a45c9225e11e72bf6b/images/a1da8772-8a35-42a9-9e85-683c6a862dc6.=
+png" alt=3D"a1da8772-8a35-42a9-9e85-683c6a862dc6.png" border=3D"0" style=
+=3D"margin: 0; padding: 0;max-width:50px; max-height:auto; display:block;=
+ border:0px;" class=3D"img_icon"></a>
+                                  </td>
+
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+                          <!-- Social -->
+                          <tr>
+                            <td height=3D"20" style=3D"font-size:1px;line-=
+height:1px;">=C2=A0</td>
+                          </tr>
+                          <!-- Content -->
+                          <tr>
+                            <td align=3D"center" class=3D"desc_text1" styl=
+e=3D"font-family:'Helvetica Neue'=2C Helvetica=2C Arial=2C sans-serif;font=
+-weight:normal;color:#6B6B6B;font-size:13px;line-height:26px;">
+                              <div>
+                                <a href=3D"https://mit.us9.list-manage.com=
+/track/click?u=3D96e741c12c99f46f1f3e95e09&id=3Dd3ded80230&e=3D295c2f8fe2=
+" target=3D"_blank" style=3D"font-family:'Helvetica Neue'=2C Helvetica=2C=
+ Arial=2C sans-serif;font-weight:bold;color:#25aff4;font-size:14px;line-he=
+ight:26px;text-decoration:none;">
+                                  Scratch
+                                </a>
+                                is a project of the Lifelong Kindergarten=
+ Group at the MIT Media Lab
+                              </div>
+                            </td>
+                          </tr>
+                          <!-- End Content -->
+                          <tr>
+                            <td height=3D"18" style=3D"font-size:1px;line-=
+height:1px;">=C2=A0</td>
+                          </tr>
+                          <!-- Content -->
+                          <tr>
+                            <td align=3D"center" class=3D"desc_text1" styl=
+e=3D"font-family:'Helvetica Neue'=2C Helvetica=2C Arial=2C sans-serif;font=
+-weight:normal;color:#25aff4;font-size:14px;line-height:26px;">
+                              <div>
+                                <a href=3D"https://mit.us9.list-manage.com=
+/unsubscribe?u=3D96e741c12c99f46f1f3e95e09&id=3D149bd1a4c2&e=3D295c2f8fe2&c=
+=3D9666f1c6d4" target=3D"_blank" style=3D"font-family:'Helvetica Neue'=2C=
+ Helvetica=2C Arial=2C sans-serif;font-weight:bold;color:#25aff4;font-size=
+:14px;line-height:26px;text-decoration:none;">
+                                  unsubscribe from this list
+                                </a>
+                                =C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=
+=C2=A0=C2=A0
+                                <a href=3D"https://mit.us9.list-manage.com=
+/profile?u=3D96e741c12c99f46f1f3e95e09&id=3D149bd1a4c2&e=3D295c2f8fe2" targe=
+t=3D"_blank" style=3D"font-family:'Helvetica Neue'=2C Helvetica=2C Arial=
+=2C sans-serif;font-weight:bold;color:#25aff4;font-size:14px;line-height:2=
+6px;text-decoration:none;">
+                                  update subscription preferences
+                                </a>
+                              </div>
+                            </td>
+                          </tr>
+                          <!-- End Content -->
+                        </table>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td height=3D"50" style=3D"font-size:1px;line-height=
+:1px;">=C2=A0</td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+              <!-- End Text &amp; Social area -->
+              <!-- end footer -->
+            </table>
+          <img src=3D"https://mit.us9.list-manage.com/track/open.php?u=3D9=
+6e741c12c99f46f1f3e95e09&id=3D9666f1c6d4&e=3D295c2f8fe2" height=3D"1" wid=
+th=3D"1"></body>
+</html>
+--_----------=_MCPart_1919048176--

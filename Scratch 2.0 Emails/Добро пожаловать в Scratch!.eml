@@ -1,0 +1,299 @@
+Delivered-To: jaxonferrero1@gmail.com
+Received: by 2002:a02:4c4d:0:0:0:0:0 with SMTP id a74-v6csp3283168jab;
+        Sun, 22 Apr 2018 15:57:36 -0700 (PDT)
+X-Google-Smtp-Source: AIpwx4/qZhd3ymdC/wodInSDqnXI7KaXccmBb8RKePgcPKL8nX1fZWg4nabNas3jsqC5gcIMpgss
+X-Received: by 2002:a25:2d6f:: with SMTP id s47-v6mr10649482ybe.93.1524437856098;
+        Sun, 22 Apr 2018 15:57:36 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1524437856; cv=none;
+        d=google.com; s=arc-20160816;
+        b=v6+U6iDo97ODlIcopC8vMcBAJF76MSRR+Yt8i9rRWdlIZLq7Bm63zIKdKxW2p6TYF6
+         6WecxynSvYMBfdWpmaf1S5O6KVVgIbbGuP/tFtJou4w3KtzKTuxqxmi5JIUysUFrDhGU
+         BfW20ooab8koWsrH3/6GSZYrI+OOA1Ys1h321yyZNZpH89OBtYtu2tx1da3vwuP8VSPL
+         ZBcQEqEBGD/RB+NdlVyw0t23rwXCQfRA6dGzGrSGsfmUqQ3D16NAkl5qo/sLJCajXnlX
+         DE0QG/QAoQUozhuJDOgvnuaAkRWwhQVDkx7YY2kt+/9Y7hEqln41ccR1xroIUDDDP9X4
+         PuEQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=mime-version:date:reply-to:message-id:to:subject:from
+         :dkim-signature:dkim-signature:arc-authentication-results;
+        bh=Dckwcm1sT8FXtoiyf6M3iBHSoud8jIE9DuoYofdomrY=;
+        b=unZGMo7We1d15RMyrnYnDj/jXL4r8ftjWyYEgJ9OF7tt1TNcLIVfiWAgQd2T8rVB/8
+         7OjlxwjHIjmmaqDR4Vx2oKWMEVIN3hSy31VG9BVPzFlw+QL/ucE4lmfh3M+kl+AdbWGw
+         SuXyeq5+xO+cMnN5fcdIa7SHvbG8XiSslYTmpPpiG//u3GJdN+PsJ3A/0BYffJRa1B9k
+         /hUKyqc1dUpWEEDnqyFT44esw0K77/0fH+e79swSMQrEqdRi5ZQ+GX0wuXFE2eZDQcZF
+         S3mxvAnfMogORDH8rMM92wURBVe8qDh3M4Lysn1/8Gf4t77veCNmdQm9NIA/Iv54NDw/
+         gKHA==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@scratch.mit.edu header.s=mandrill header.b=Txwtb+vQ;
+       dkim=pass header.i=@mandrillapp.com header.s=mandrill header.b=SMA2pJN1;
+       spf=pass (google.com: domain of bounce-md_30236239.5add135f.v1-c42c0794dbbe44349c506d525ef1f4c6@mandrillapp.com designates 198.2.135.24 as permitted sender) smtp.mailfrom=bounce-md_30236239.5add135f.v1-c42c0794dbbe44349c506d525ef1f4c6@mandrillapp.com
+Return-Path: <bounce-md_30236239.5add135f.v1-c42c0794dbbe44349c506d525ef1f4c6@mandrillapp.com>
+Received: from mail135-24.atl141.mandrillapp.com (mail135-24.atl141.mandrillapp.com. [198.2.135.24])
+        by mx.google.com with ESMTPS id n187-v6si2911468ybf.420.2018.04.22.15.57.35
+        for <jaxonferrero1@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Sun, 22 Apr 2018 15:57:36 -0700 (PDT)
+Received-SPF: pass (google.com: domain of bounce-md_30236239.5add135f.v1-c42c0794dbbe44349c506d525ef1f4c6@mandrillapp.com designates 198.2.135.24 as permitted sender) client-ip=198.2.135.24;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@scratch.mit.edu header.s=mandrill header.b=Txwtb+vQ;
+       dkim=pass header.i=@mandrillapp.com header.s=mandrill header.b=SMA2pJN1;
+       spf=pass (google.com: domain of bounce-md_30236239.5add135f.v1-c42c0794dbbe44349c506d525ef1f4c6@mandrillapp.com designates 198.2.135.24 as permitted sender) smtp.mailfrom=bounce-md_30236239.5add135f.v1-c42c0794dbbe44349c506d525ef1f4c6@mandrillapp.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=mandrill; d=scratch.mit.edu;
+ h=From:Subject:To:Message-Id:Reply-To:Date:MIME-Version:Content-Type; i=no-reply@scratch.mit.edu;
+ bh=Dckwcm1sT8FXtoiyf6M3iBHSoud8jIE9DuoYofdomrY=;
+ b=Txwtb+vQjf0WJi+6tV/9twr5EXLffCdIVvqaIXdBSpDfhvX9yqMhFGnIqWO15nEvzS09/EeBJ6WS
+   KShrSSiB4lXoWvSfW3inzywOIyCmi+sKVX7YXjsRFyaRs7io3qLBMJpL9v3nzimAqjq6GT+VWUzS
+   hi+t1xQPRnvpuwSIhFs=
+Received: from pmta03.mandrill.prod.atl01.rsglab.com (127.0.0.1) by mail135-24.atl141.mandrillapp.com id hrk9m01sau80 for <jaxonferrero1@gmail.com>; Sun, 22 Apr 2018 22:57:35 +0000 (envelope-from <bounce-md_30236239.5add135f.v1-c42c0794dbbe44349c506d525ef1f4c6@mandrillapp.com>)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=mandrillapp.com; 
+ i=@mandrillapp.com; q=dns/txt; s=mandrill; t=1524437855; h=From : 
+ Subject : To : Message-Id : Reply-To : Date : MIME-Version : 
+ Content-Type : From : Subject : Date : X-Mandrill-User : 
+ List-Unsubscribe; bh=Dckwcm1sT8FXtoiyf6M3iBHSoud8jIE9DuoYofdomrY=; 
+ b=SMA2pJN1cWaPBpz5zWhLnBMJNjp2U9iZplOcsjcezONdwHvWj+EVxVP705W07AhDDavzcY
+ uJrSCXX16NLEUc3J/OePXX/DA/1+N3faMPku+0LnU3IOqUEcOvdSWladWx8mVdz1nVT1e4+A
+ KcpMQX3xHOVYFChE7U/6+5e0zow+w=
+From: <no-reply@scratch.mit.edu>
+Subject: =?utf-8?Q?=D0=94=D0=BE=D0=B1=D1=80=D0=BE=20=D0=BF=D0=BE=D0=B6=D0=B0=D0=BB=D0=BE=D0=B2=D0=B0=D1=82=D1=8C=20=D0=B2=20Scratch!?=
+Return-Path: <bounce-md_30236239.5add135f.v1-c42c0794dbbe44349c506d525ef1f4c6@mandrillapp.com>
+Received: from [18.85.28.134] by mandrillapp.com id c42c0794dbbe44349c506d525ef1f4c6; Sun, 22 Apr 2018 22:57:35 +0000
+To: <jaxonferrero1@gmail.com>
+Message-Id: <20180422225735.89385.40956@scratchvirt4>
+Reply-To: <no-reply@scratch.mit.edu>
+X-Report-Abuse: Please forward a copy of this message, including all headers, to abuse@mandrill.com
+X-Report-Abuse: You can also report abuse here: http://mandrillapp.com/contact/abuse?id=30236239.c42c0794dbbe44349c506d525ef1f4c6
+X-Mandrill-User: md_30236239
+Date: Sun, 22 Apr 2018 22:57:35 +0000
+MIME-Version: 1.0
+Content-Type: multipart/alternative; boundary="_av-_yZBenF91Go6mJpjbIsZLg"
+
+--_av-_yZBenF91Go6mJpjbIsZLg
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+
+
+
+=D0=94=D0=BE=D0=B1=D1=80=D0=BE =D0=BF=D0=BE=D0=B6=D0=B0=D0=BB=D0=BE=D0=B2=
+=D0=B0=D1=82=D1=8C, MEE6_bot
+
+=D0=9C=D1=8B =D0=BE=D1=87=D0=B5=D0=BD=D1=8C =D1=80=D0=B0=D0=B4=D1=8B, =D1=
+=87=D1=82=D0=BE =D0=B2=D1=8B =D0=BF=D1=80=D0=B8=D1=81=D0=BE=D0=B5=D0=B4=D0=
+=B8=D0=BD=D0=B8=D0=BB=D0=B8=D1=81=D1=8C =D0=BA =D0=BD=D0=B0=D1=88=D0=B5=D0=
+=BC=D1=83 =D1=80=D0=B0=D1=81=D1=82=D1=83=D1=89=D0=B5=D0=BC=D1=83 =D1=81=D0=
+=BE=D0=BE=D0=B1=D1=89=D0=B5=D1=81=D1=82=D0=B2=D1=83! =D0=A1 =D0=BF=D0=BE=D0=
+=BC=D0=BE=D1=89=D1=8C=D1=8E Scratch =D0=B2=D1=8B =D0=BC=D0=BE=D0=B6=D0=B5=
+=D1=82=D0=B5 =D0=BF=D1=80=D0=BE=D0=B3=D1=80=D0=B0=D0=BC=D0=BC=D0=B8=D1=80=
+=D0=BE=D0=B2=D0=B0=D1=82=D1=8C =D1=81=D0=B2=D0=BE=D0=B8 =D1=81=D0=BE=D0=B1=
+=D1=81=D1=82=D0=B2=D0=B5=D0=BD=D0=BD=D1=8B=D0=B5 =D0=B8=D0=BD=D1=82=D0=B5=
+=D1=80=D0=B0=D0=BA=D1=82=D0=B8=D0=B2=D0=BD=D1=8B=D0=B5 =D0=B8=D1=81=D1=82=
+=D0=BE=D1=80=D0=B8=D0=B8, =D0=B8=D0=B3=D1=80=D1=8B =D0=B8 =D0=B0=D0=BD=D0=
+=B8=D0=BC=D0=B0=D1=86=D0=B8=D0=B8 - =D0=B8 =D0=B4=D0=B5=D0=BB=D0=B8=D1=82=
+=D1=8C=D1=81=D1=8F =D1=81=D0=B2=D0=BE=D0=B8=D0=BC=D0=B8 =D1=82=D0=B2=D0=BE=
+=D1=80=D0=B5=D0=BD=D0=B8=D1=8F=D0=BC=D0=B8 =D1=81 =D0=B4=D1=80=D1=83=D0=B3=
+=D0=B8=D0=BC=D0=B8 =D0=BB=D1=8E=D0=B4=D1=8C=D0=BC=D0=B8 =D0=B2 =D1=81=D0=BE=
+=D0=BE=D0=B1=D1=89=D0=B5=D1=81=D1=82=D0=B2=D0=B5.
+
+=D0=A7=D1=82=D0=BE =D0=B4=D0=B0=D0=BB=D1=8C=D1=88=D0=B5?
+    - Read our Community Guidelines [https://scratch.mit.edu/community_guid=
+elines/]
+    - =D0=A3=D0=B7=D0=BD=D0=B0=D1=82=D1=8C =D0=BA=D0=B0=D0=BA =D1=81=D0=B4=
+=D0=B5=D0=BB=D0=B0=D1=82=D1=8C =D0=BF=D1=80=D0=BE=D0=B5=D0=BA=D1=82 [https:=
+//scratch.mit.edu/projects/editor/?tip_bar=3DgetStarted]
+    - Get inspired with a starter project [https://scratch.mit.edu/starter_=
+projects/]
+    - =D0=9E=D0=B1=D1=89=D0=B0=D0=B9=D1=82=D0=B5=D1=81=D1=8C =D1=81 =D0=B4=
+=D1=80=D1=83=D0=B3=D0=B8=D0=BC=D0=B8 =D0=A1=D0=BA=D1=80=D0=B5=D1=82=D1=87=
+=D0=B5=D1=80=D0=B0=D0=BC=D0=B8 [https://scratch.mit.edu/studios/146521/]
+
+
+
+
+Want to learn more?
+
+Check out our About Scratch page (https://scratch.mit.edu/about/),Frequentl=
+y Asked Questions (https://scratch.mit.edu/info/faq/), and Discussion Forum=
+s (https://scratch.mit.edu/discuss/), to learn more about Scratch. 
+
+
+
+
+Scratch!
+- =D0=9A=D0=BE=D0=BC=D0=B0=D0=BD=D0=B4=D0=B0 Scratch
+
+
+
+--_av-_yZBenF91Go6mJpjbIsZLg
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<html>
+<head>
+</head>
+<body style=3D"border: 0;margin: 0;padding: 0;background-color: #F2F2F2">
+
+
+<div id=3D"looksfunny" style=3D"border: 0;margin: 0;padding: 0;text-align: =
+center;color: #727272;line-height: 33px">Does this email look weird? - <a h=
+ref=3D"https://scratch.mit.edu/emails/welcome/MEE6_bot/0/" style=3D"color: =
+#3978c6;text-decoration: none">Click Here</a></div>
+
+
+<div id=3D"content" style=3D"border: 0;margin: 0;padding: 40px 4.5%;backgro=
+und-color: #40ACD2">
+    <div id=3D"header" style=3D"border: 0;margin: 23px auto 0 auto;padding:=
+ 0;max-width: 550px;position: relative;z-index: 2">
+        <img id=3D"logo" src=3D"https://cdn.scratch.mit.edu/scratchr2/stati=
+c/__261035900f83cc3e70a67a31855b150f__/images/mail/logo.png" style=3D"borde=
+r: 0;margin: 0 auto;padding: 0;display: block"/>
+        <img id=3D"mailbox" src=3D"https://cdn.scratch.mit.edu/scratchr2/st=
+atic/__261035900f83cc3e70a67a31855b150f__/images/mail/mailbox.png" style=3D=
+"border: 0;margin: 0;padding: 0;display: block;position: absolute;left: 7%;=
+bottom: -33px"/>
+    </div>
+    <div id=3D"message-wrapper" style=3D"border: 0;margin: 23px auto 0 auto=
+;padding: 0;max-width: 550px;position: relative;z-index: 1;background-color=
+: #fff;border-radius: 8px;box-shadow: 0 2px 2px 2px #3a9dbf">
+        <div id=3D"top-border" style=3D"border: 0;margin: 0;padding: 0;back=
+ground-color: #FDAC44;height: 20px;width: 100%;border-radius: 8px 8px 0 0;b=
+order-bottom: 3px solid #f8981d">
+        
+        </div>
+        <div id=3D"message" style=3D"border: 0;margin: 0;padding: 25px 4.5%=
+ 40px 4.5%">
+            
+<p class=3D"intro-content" style=3D"border: 0;margin: 0;padding: 5px 0;font=
+-size: 18px;line-height: 30px">Welcome to Scratch, <strong>MEE6_bot</strong=
+>!
+</p><p style=3D"border: 0;margin: 0;padding: 5px 0;font-size: 14px;line-hei=
+ght: 22px">
+    =D0=9C=D1=8B =D0=BE=D1=87=D0=B5=D0=BD=D1=8C =D1=80=D0=B0=D0=B4=D1=8B, =
+=D1=87=D1=82=D0=BE =D0=B2=D1=8B =D0=BF=D1=80=D0=B8=D1=81=D0=BE=D0=B5=D0=B4=
+=D0=B8=D0=BD=D0=B8=D0=BB=D0=B8=D1=81=D1=8C =D0=BA =D0=BD=D0=B0=D1=88=D0=B5=
+=D0=BC=D1=83 =D1=80=D0=B0=D1=81=D1=82=D1=83=D1=89=D0=B5=D0=BC=D1=83 =D1=81=
+=D0=BE=D0=BE=D0=B1=D1=89=D0=B5=D1=81=D1=82=D0=B2=D1=83! =D0=A1 =D0=BF=D0=BE=
+=D0=BC=D0=BE=D1=89=D1=8C=D1=8E Scratch =D0=B2=D1=8B =D0=BC=D0=BE=D0=B6=D0=
+=B5=D1=82=D0=B5 =D0=BF=D1=80=D0=BE=D0=B3=D1=80=D0=B0=D0=BC=D0=BC=D0=B8=D1=
+=80=D0=BE=D0=B2=D0=B0=D1=82=D1=8C =D1=81=D0=B2=D0=BE=D0=B8 =D1=81=D0=BE=D0=
+=B1=D1=81=D1=82=D0=B2=D0=B5=D0=BD=D0=BD=D1=8B=D0=B5 =D0=B8=D0=BD=D1=82=D0=
+=B5=D1=80=D0=B0=D0=BA=D1=82=D0=B8=D0=B2=D0=BD=D1=8B=D0=B5 =D0=B8=D1=81=D1=
+=82=D0=BE=D1=80=D0=B8=D0=B8, =D0=B8=D0=B3=D1=80=D1=8B =D0=B8 =D0=B0=D0=BD=
+=D0=B8=D0=BC=D0=B0=D1=86=D0=B8=D0=B8 - =D0=B8 =D0=B4=D0=B5=D0=BB=D0=B8=D1=
+=82=D1=8C=D1=81=D1=8F =D1=81=D0=B2=D0=BE=D0=B8=D0=BC=D0=B8 =D1=82=D0=B2=D0=
+=BE=D1=80=D0=B5=D0=BD=D0=B8=D1=8F=D0=BC=D0=B8 =D1=81 =D0=B4=D1=80=D1=83=D0=
+=B3=D0=B8=D0=BC=D0=B8 =D0=BB=D1=8E=D0=B4=D1=8C=D0=BC=D0=B8 =D0=B2 =D1=81=D0=
+=BE=D0=BE=D0=B1=D1=89=D0=B5=D1=81=D1=82=D0=B2=D0=B5.
+</p>
+<p class=3D"bold" style=3D"border: 0;margin: 0;padding: 5px 0;font-size: 14=
+px;line-height: 22px;font-weight: bold">=D0=A7=D1=82=D0=BE =D0=B4=D0=B0=D0=
+=BB=D1=8C=D1=88=D0=B5?</p>
+<ul style=3D"border: 0;margin: 10px 25px;padding: 0">
+    <li style=3D"border: 0;margin: 0;padding: 0"><a href=3D"https://scratch=
+.mit.edu/community_guidelines/" style=3D"color: #3978c6;text-decoration: no=
+ne">Read our Community Guidelines</a></li>
+    <li style=3D"border: 0;margin: 0;padding: 0"><a href=3D"https://scratch=
+.mit.edu/projects/editor/?tip_bar=3DgetStarted" style=3D"color: #3978c6;tex=
+t-decoration: none">=D0=A3=D0=B7=D0=BD=D0=B0=D1=82=D1=8C =D0=BA=D0=B0=D0=BA=
+ =D1=81=D0=B4=D0=B5=D0=BB=D0=B0=D1=82=D1=8C =D0=BF=D1=80=D0=BE=D0=B5=D0=BA=
+=D1=82</a></li>
+    <li style=3D"border: 0;margin: 0;padding: 0"><a href=3D"https://scratch=
+.mit.edu/starter_projects/" style=3D"color: #3978c6;text-decoration: none">=
+Get inspired with a starter project</a></li>
+    <li style=3D"border: 0;margin: 0;padding: 0"><a href=3D"https://scratch=
+.mit.edu/studios/146521/" style=3D"color: #3978c6;text-decoration: none">=
+=D0=9E=D0=B1=D1=89=D0=B0=D0=B9=D1=82=D0=B5=D1=81=D1=8C =D1=81 =D0=B4=D1=80=
+=D1=83=D0=B3=D0=B8=D0=BC=D0=B8 =D0=A1=D0=BA=D1=80=D0=B5=D1=82=D1=87=D0=B5=
+=D1=80=D0=B0=D0=BC=D0=B8</a></li>
+</ul>
+
+
+
+<p class=3D"bold" style=3D"border: 0;margin: 0;padding: 5px 0;font-size: 14=
+px;line-height: 22px;font-weight: bold">Want to learn more?</p>
+<p style=3D"border: 0;margin: 0;padding: 5px 0;font-size: 14px;line-height:=
+ 22px">
+    Check out our <a href=3D"https://scratch.mit.edu/about/" style=3D"color=
+: #3978c6;text-decoration: none">About Scratch</a> page, <a href=3D"https:/=
+/scratch.mit.edu/info/faq/" style=3D"color: #3978c6;text-decoration: none">=
+Frequently Asked Questions</a>, and <a href=3D"https://scratch.mit.edu/disc=
+uss/" style=3D"color: #3978c6;text-decoration: none">Discussion Forums</a>,=
+ to learn more about Scratch.
+
+</p>
+
+
+
+<p style=3D"border: 0;margin: 0;padding: 5px 0;font-size: 14px;line-height:=
+ 22px">
+    <strong>Scratch!</strong>
+    <br/>
+    - =D0=9A=D0=BE=D0=BC=D0=B0=D0=BD=D0=B4=D0=B0 Scratch
+</p>
+
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<div id=3D"footer" style=3D"border: 0;margin: 0;padding: 0;text-align: cent=
+er;color: #727272">
+    <div id=3D"footer-inner" style=3D"border: 0;margin: 0 auto;padding: 40p=
+x 4.5%;max-width: 550px">
+        <p style=3D"border: 0;margin: 0;padding: 5px 0;font-size: 12px;line=
+-height: 22px;text-align: center">
+        
+            <a href=3D"https://scratch.mit.edu/" style=3D"color: #3978c6;te=
+xt-decoration: none">Scratch</a> is a free project of the Lifelong Kinderga=
+rten Group at the MIT Media Lab. Using Scratch, children can create interac=
+tive stories, games, and animations.
+        
+        </p>
+        <p style=3D"border: 0;margin: 0;padding: 5px 0;font-size: 12px;line=
+-height: 22px;text-align: center">
+        
+            If you have questions about Scratch or this email, please take =
+a look at our <a href=3D"https://scratch.mit.edu/info/faq/" style=3D"color:=
+ #3978c6;text-decoration: none">FAQ</a>.
+        
+        </p>
+
+        
+        <p style=3D"border: 0;margin: 0;padding: 5px 0;font-size: 12px;line=
+-height: 22px;text-align: center">
+        
+        
+=D0=A7=D1=82=D0=BE=D0=B1=D1=8B =D0=BF=D1=80=D0=B5=D0=BA=D1=80=D0=B0=D1=82=
+=D0=B8=D1=82=D1=8C =D0=BF=D0=BE=D0=BB=D1=83=D1=87=D0=B0=D1=82=D1=8C =D0=BF=
+=D0=B8=D1=81=D1=8C=D0=BC=D0=B0 =D0=BE=D1=82 Scratch, <a href=3D"https://scr=
+atch.mit.edu/mail/blacklist/ImpheG9uZmVycmVybzFAZ21haWwuY29tIg/1fANvL/ReBMu=
+3sRj4UexyyrPwugLneyId0/" style=3D"color: #3978c6;text-decoration: none">=D0=
+=BE=D1=82=D0=BF=D0=B8=D1=88=D0=B8=D1=82=D0=B5=D1=81=D1=8C</a>.
+        </p>
+        
+        <p style=3D"border: 0;margin: 0;padding: 5px 0;font-size: 12px;line=
+-height: 22px;text-align: center">
+            <a href=3D"https://scratch.mit.edu/privacy_policy/" style=3D"co=
+lor: #3978c6;text-decoration: none">=D0=9F=D0=BE=D0=BB=D0=B8=D1=82=D0=B8=D0=
+=BA=D0=B0 =D0=BA=D0=BE=D0=BD=D1=84=D0=B8=D0=B4=D0=B5=D0=BD=D1=86=D0=B8=D0=
+=B0=D0=BB=D1=8C=D0=BD=D0=BE=D1=81=D1=82=D0=B8</a> | 
+            <a href=3D"https://scratch.mit.edu/about/" style=3D"color: #397=
+8c6;text-decoration: none">=D0=9E Scratch</a> | 
+            <a href=3D"https://secure.donationpay.org/codetolearn/" style=
+=3D"color: #3978c6;text-decoration: none">=D0=A1=D0=B4=D0=B5=D0=BB=D0=B0=D1=
+=82=D1=8C =D0=BF=D0=BE=D0=B6=D0=B5=D1=80=D1=82=D0=B2=D0=BE=D0=B2=D0=B0=D0=
+=BD=D0=B8=D0=B5</a>
+        </p>
+        
+    </div>
+</div>
+
+<img src=3D"https://mandrillapp.com/track/open.php?u=3D30236239&id=3Dc42c07=
+94dbbe44349c506d525ef1f4c6" height=3D"1" width=3D"1"></body>
+</html>
+
+
+
+--_av-_yZBenF91Go6mJpjbIsZLg--
+
