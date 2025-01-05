@@ -1,0 +1,151 @@
+Delivered-To: jaxonferrero1@gmail.com
+Received: by 2002:a02:7f15:0:0:0:0:0 with SMTP id r21-v6csp2345637jac;
+        Sat, 28 Jul 2018 13:14:44 -0700 (PDT)
+X-Google-Smtp-Source: AAOMgpcM2FHMY/iAd9wonp4e+nRJ9rsz3V/Ljxdis/dI8fXNtogWZj65RKVAR8NGifadkUlZrRBW
+X-Received: by 2002:ac8:1857:: with SMTP id n23-v6mr11374999qtk.4.1532808884380;
+        Sat, 28 Jul 2018 13:14:44 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1532808884; cv=none;
+        d=google.com; s=arc-20160816;
+        b=kCtum7vJYk4fQPMMNmnMpTgiVPGyye+HgNnvVUpYejm6lW9DmWNHiM7vMpPn42+Zz4
+         S2efmDz7QnIOTbex/OMRIMkV8hQ6WnHuY4oKpU8/2r+euX5NvxyHHact7wdBoxFMywcS
+         yMjmMKipdRmXhywZKZIZQlQOJiQ2xw73Eh4Inpb5g8y15Zv3O/Jtob6bPs2r3tMLhzks
+         qW0w7dvYV6tikS7VehtIDC4BeeEnyZ5N/B3zcjIAtJyv0Qr7phxWE2+gUGr19/JPxUlP
+         XZZMddY9tJrf7IYpRY0iBEAIh0rMJaLfhqg6KF1Vovti45mWOb8HyyUwLSdA/PwdISjU
+         GfGg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=sent-on:content-transfer-encoding:subject:references:in-reply-to
+         :message-id:to:reply-to:from:date:mime-version:dkim-signature
+         :dkim-signature:arc-authentication-results;
+        bh=M2yP83/97wVh4Z7x4BYTzJxRPvYqmqHST0LOztD0bkw=;
+        b=soDWaXA56ZbZAEZfXiheMuXhC5jP+ytmOrwt3DpkGwD85yXPJku66RynNRdWA99Lef
+         3dTGBhTRk0Ny3ksNM6lqKWk1Ub/bDVppElXCxKtqTeaCmQNbB9EBFRfWQEv6g+dtNA0o
+         mlCG6hErWbGXOfkGnpuRzbWGtP33KCd2c7um/DQZ7nX1kQqcUohB7FUFNROS1JabmPIP
+         BubQsZ4FdECOGmSG6HXvwAjdIMb20XB9pTXlbMcJdcJ/+U5fIhaOJMKDDOBNKw+pJV9w
+         XzIvdFBQ30/4J58cDvPGe8JBUXpgDKInP+ppKWSMxpzrGD1AkQxxS4WWQKCuDwqNozn5
+         IAyQ==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@freshdesk.com header.s=s1 header.b=kXFVb3Jb;
+       dkim=pass header.i=@sendgrid.info header.s=smtpapi header.b=Kb1tpmii;
+       spf=pass (google.com: domain of bounces+2329044-9664-jaxonferrero1=gmail.com@smtp.freshdesk.com designates 167.89.108.81 as permitted sender) smtp.mailfrom="bounces+2329044-9664-jaxonferrero1=gmail.com@smtp.freshdesk.com"
+Return-Path: <bounces+2329044-9664-jaxonferrero1=gmail.com@smtp.freshdesk.com>
+Received: from o14.email.freshdesk.com (o14.email.freshdesk.com. [167.89.108.81])
+        by mx.google.com with ESMTPS id s127-v6si7528286qkh.181.2018.07.28.13.14.43
+        for <jaxonferrero1@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Sat, 28 Jul 2018 13:14:44 -0700 (PDT)
+Received-SPF: pass (google.com: domain of bounces+2329044-9664-jaxonferrero1=gmail.com@smtp.freshdesk.com designates 167.89.108.81 as permitted sender) client-ip=167.89.108.81;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@freshdesk.com header.s=s1 header.b=kXFVb3Jb;
+       dkim=pass header.i=@sendgrid.info header.s=smtpapi header.b=Kb1tpmii;
+       spf=pass (google.com: domain of bounces+2329044-9664-jaxonferrero1=gmail.com@smtp.freshdesk.com designates 167.89.108.81 as permitted sender) smtp.mailfrom="bounces+2329044-9664-jaxonferrero1=gmail.com@smtp.freshdesk.com"
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; d=freshdesk.com; 
+	h=mime-version:from:reply-to:to:in-reply-to:references:subject:content-type:content-transfer-encoding; 
+	s=s1; bh=eghXkdf90Es/VzkABqj2YJpa6sE=; b=kXFVb3JblvtKQ9oicvtnIZi
+	iiW5GwaW/9mH2DEcH4+RcYMatNhcwod/quZSEHHKuFUdHOmNYUx4UaQDZtK7O1Cu
+	C6yjhi2Ic1Vr4e7AIR657bms44EIqC+12K/uLr34G+BWP+1k0apGIN5LL6n8L9PH
+	W1LRBqxWnzitHvUvwwbQ=
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; d=sendgrid.info; 
+	h=mime-version:from:reply-to:to:in-reply-to:references:subject:content-type:content-transfer-encoding:x-feedback-id; 
+	s=smtpapi; bh=eghXkdf90Es/VzkABqj2YJpa6sE=; b=Kb1tpmiiVZBAhcSxyQ
+	ebFAx/MZYbSKfZlxHUG1skq0BpnpPazyHBir9GFpQSsz0aakdFiu85nnAqquAhdK
+	+zHSGbW6WvT8G405m8/uvZZa4EELdWs5Yloc4RrjcmeeDROlK4JDwK41jGSWkhZ9
+	qFwgDKRW38gg1Z8kWZFmHc+94=
+Received: by filter1455p1mdw1.sendgrid.net with SMTP id filter1455p1mdw1-11575-5B5CCEB2-22
+        2018-07-28 20:14:42.744949903 +0000 UTC m=+251363.839839224
+Received: from freshdesk.com (mail-us3.freshdesk.com [34.199.167.230])
+	by ismtpd0004p1iad1.sendgrid.net (SG) with ESMTP id _689-gQSTmydS8pFcS04zg
+	Sat, 28 Jul 2018 20:14:42.756 +0000 (UTC)
+MIME-Version: 1.0
+Received: from ec2-18-207-85-237.compute-1.amazonaws.com (EHLO freshdesk.com) ([18.207.85.237])
+          by smtpout.freshdesk.com (Freshworks SMTP Server) with ESMTPA ID -686920523.;
+          Sat, 28 Jul 2018 20:14:42 +0000 (UTC)
+Date: Sat, 28 Jul 2018 20:14:42 +0000 (UTC)
+From: "Help@Scratch" <help@scratch.mit.edu>
+Reply-To: "Help@Scratch" <help@scratch.mit.edu>
+To: jaxonferrero1@gmail.com
+Message-ID: <5b5cceb271613_1c711409e0c21283241.email-sidekiq-2@email.freshdesk.com>
+In-Reply-To: <20180728170951.58157.38528@scratchvirt4>
+References: <20180728170951.58157.38528@scratchvirt4>
+Subject: Re: [#122954] tengisthegame said a bad word in RobloxFan75000's
+ profile
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5b5cceb27b27e_1c711409e0c212833dc";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+sent-on: 2018-07-28 20:14:42 +0000
+X-SG-EID: sdXk2bBWtIQU9c4eWpKtPZHpP+tg+1BtdY0reNvti/uSMMoK/E1uDFNXGAv5XZ2WNkysM985fjsx57
+ kBsEV9TDsnaqCz/iNIetl5OPnBCBM6kTsPXZOFgINlRd9hqnpLucXseZIoAL6/BOXOtYvfxapQLHDX
+ Jetvr9KT1I6BAJ6a18Xz4YCrVaJsdPFwr/v9paRk4p5hhN/vH7+OKn2VGBp4H3Y/CdE2wled1UJavV
+ M=
+X-SG-ID: dXNuuxiaeVPHPf1dZH02eKbjh3uBg8I33Nxqb7HX9ymXOg0sOFWtv7DtlQ/R8vtuS5EphFq2Na3K9S
+ 3wwzmJPZ5Oo9XAW9f6eh+j4OE1oRS0UGzyiR9troyi+ZRib6CmJfwRYiBsrSQ/mAqrpTn2w+vBbB6A
+ yvw5/muPxmSj6aRnArj3ftSRJoZpB6cRbcrvUf9nb75zfrcuzA7OuNL1z0/GNd2OmXSXxGoawGSaYz
+ WZWSG3hn8ditChh3epGlRcNI78QPpDlBq7WvKHFo3gBLoouyrJ8QD1+HTYft8DQDta3BmBL8rus4Rz
+ yl7EyWI3ILMlvJ3Uk1CsyxBjXOoxtdhU1WprJfngT2NBJYBk6B1R356Fa6bohDWaFcUad54SPDswNV
+ absHzTCwdM77gCq9mvVlivolmAliBna8CROPT4/OXJCwGuXKm+8NcRf21T
+X-Feedback-ID: 2329044:8vJ6OL+E4YU26iGhJbbpWb/nZBtBCCMTs2S5lFUfAXE=:8vJ6OL+E4YU26iGhJbbpWb/nZBtBCCMTs2S5lFUfAXE=:SG
+
+----==_mimepart_5b5cceb27b27e_1c711409e0c212833dc
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Hi,     Thanks for the heads up! We've reached out to this user about their recent comments. Please do continue to report any other instances of inappropriate comments.  
+
+
+
+       Jolie  Scratch Team 
+ 
+ 
+                 
+         On Sat, 28 Jul at  1:09 PM
+          ,  Jaxon Ferrero <jaxonferrero1@gmail.com>  wrote:
+           
+http://scratch.mit.edu/users/tengisthegame     Metadata: - User: WindowsAdmin (https://scratch.mit.edu/users/WindowsAdmin/) - Operating System: Windows NT 10.0 - Browser: Microsoft Edge 42.17134.1.0 - Flash Version: Flash 30.0 (release 0) He did not swear but he/she said that she/he hated RobloxFan75000 -WindowsAdmin
+
+
+
+
+----==_mimepart_5b5cceb27b27e_1c711409e0c212833dc
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<div style="font-family:Helvetica Neue, Helvetica, Arial, sans-serif; font-size:13px;">
+	<div dir="ltr" style='font-size: 13px; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;'>
+<div></div>
+<div>
+<div>Hi,</div>
+<div><br></div>
+<div>Thanks for the heads up! We've reached out to this user about their recent comments. Please do continue to report any other instances of inappropriate comments.</div>
+<div>
+
+
+
+</div>
+<div></div>
+<div></div>
+<div><br></div>
+<div>Jolie</div>
+<div>Scratch Team</div>
+</div>
+</div>
+                <div class="freshdesk_quote">
+        <blockquote class="freshdesk_quote">On Sat, 28 Jul at  1:09 PM
+          <span class="separator"></span>,  Jaxon Ferrero &lt;jaxonferrero1@gmail.com&gt;  wrote:
+          <div>
+<a href="http://scratch.mit.edu/users/tengisthegame" rel="noreferrer">http://scratch.mit.edu/users/tengisthegame</a><br><br><br><br><br>Metadata:<br>- User: WindowsAdmin (<a href="https://scratch.mit.edu/users/WindowsAdmin/" rel="noreferrer">https://scratch.mit.edu/users/WindowsAdmin/</a>)<br>- Operating System: Windows NT 10.0<br>- Browser: Microsoft Edge 42.17134.1.0<br>- Flash Version: Flash 30.0 (release 0)<br>He did not swear but he/she said that she/he hated RobloxFan75000<br>-WindowsAdmin<br>
+</div>
+        </blockquote>
+       </div>
+              
+
+
+	
+
+
+
+<span title="fd_tkt_identifier" style='font-size:0px; font-family:"fdtktid"; min-height:0px; height:0px; opacity:0; max-height:0px; line-height:0px; color:#ffffff'>122954:40167</span>
+
+</div>
+----==_mimepart_5b5cceb27b27e_1c711409e0c212833dc--

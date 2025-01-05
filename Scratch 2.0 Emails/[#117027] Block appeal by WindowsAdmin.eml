@@ -1,0 +1,217 @@
+Delivered-To: jaxonferrero1@gmail.com
+Received: by 2002:a02:4048:0:0:0:0:0 with SMTP id n69-v6csp2304186jaa;
+        Tue, 29 May 2018 10:49:31 -0700 (PDT)
+X-Google-Smtp-Source: ADUXVKKScENvkeJyI+q+E/Gkx1em8vvxkXLSPupq1gMsDD+d9hK9CpUYqH9ALMSk+efmZWYscrao
+X-Received: by 2002:ac8:3cf:: with SMTP id z15-v6mr18170416qtg.119.1527616170941;
+        Tue, 29 May 2018 10:49:30 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1527616170; cv=none;
+        d=google.com; s=arc-20160816;
+        b=jGeKbd+Hh2pOEBM+W4JkpEJCS0VM1tuHPDaESq1bC6PYByrETqdIEOT7S98p+oRMHT
+         CTZgStdD3RrzeUkDBxY67zIbdVtiKr9+4kf1NZemM2wvMsf5sgWsHNTkmUyjymwP+Uit
+         vWXHVX1eXVFOIs85QSGvJ8IKt5OQJrNFP4GP0e+ePgFhBWG8U+3r75vlVINZIB6LOu3E
+         og7kF3PqP4HoYqsqE+QZHs82P74uSBolNFCGxxlmPo1Njf96HbPgPtvUJIXlkDCIN0ko
+         yqjUTC4Jwi8e5ggkSSfxqoDUVsJe6HF9/7p+ndSYjqGX8AIy8rwatq3LQDAouztuo0Ti
+         rvMw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=sent-on:content-transfer-encoding:subject:references:in-reply-to
+         :message-id:to:reply-to:from:date:mime-version:dkim-signature
+         :dkim-signature:arc-authentication-results;
+        bh=8WsX5OsWjPl4VQhOlEEUoE5xLlGbiQiDXVzS7C1dFfk=;
+        b=SwFvMTT79QR/aAWsYV5ieSmE8fqX7LKf6OzlGw7MoP1qGkag/cMH0VfVMYsTr7AJ3h
+         IxgwMd4AA61Wfo/YvEQhgV1MFHb/ilMjD+6Tl5mIPftRSHMpQb8VZGzMxknVgdnXm/zY
+         ORTDNnD97lbYBabChSIEbEVGDn4aca5YoGT4orThXo6lr4WfvH/npyC7q+oCkRH6aywV
+         EnSPcLSkbphHeQ/nxumHJHzLKoa9tOvYynIEdFemJM7FOc+bSOs+1AchKlDU4TEJXvJJ
+         aqglddzw96S6isABsPyHGfMH0APT+izZujrgA9R7IFPQPZwY+YoxuUl4fq8APdU0grI/
+         qp7w==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@freshdesk.com header.s=s1 header.b=P4ZJrMO3;
+       dkim=pass header.i=@sendgrid.info header.s=smtpapi header.b=Trpd9Qa8;
+       spf=pass (google.com: domain of bounces+2329044-9664-jaxonferrero1=gmail.com@smtp.freshdesk.com designates 198.37.146.35 as permitted sender) smtp.mailfrom=bounces+2329044-9664-jaxonferrero1=gmail.com@smtp.freshdesk.com
+Return-Path: <bounces+2329044-9664-jaxonferrero1=gmail.com@smtp.freshdesk.com>
+Received: from o23.email.freshdesk.com (o23.email.freshdesk.com. [198.37.146.35])
+        by mx.google.com with ESMTPS id h35-v6si88117qkh.156.2018.05.29.10.49.30
+        for <jaxonferrero1@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Tue, 29 May 2018 10:49:30 -0700 (PDT)
+Received-SPF: pass (google.com: domain of bounces+2329044-9664-jaxonferrero1=gmail.com@smtp.freshdesk.com designates 198.37.146.35 as permitted sender) client-ip=198.37.146.35;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@freshdesk.com header.s=s1 header.b=P4ZJrMO3;
+       dkim=pass header.i=@sendgrid.info header.s=smtpapi header.b=Trpd9Qa8;
+       spf=pass (google.com: domain of bounces+2329044-9664-jaxonferrero1=gmail.com@smtp.freshdesk.com designates 198.37.146.35 as permitted sender) smtp.mailfrom=bounces+2329044-9664-jaxonferrero1=gmail.com@smtp.freshdesk.com
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; d=freshdesk.com; 
+	h=mime-version:from:reply-to:to:in-reply-to:references:subject:content-type:content-transfer-encoding; 
+	s=s1; bh=dpoFFTbOqHB1LgoCOp8OUk6a3Qs=; b=P4ZJrMO3VVwWj9Xn7c0cVMS
+	/Ymx3e8LOZG58XZChyad7QVHKtHntjVrJHUv+q2WNRxPRswW3yqS9IJ2w9m1ur1u
+	MeuoI8uea4W4FcAD2K9wsmU0QasOmGjqlUQCHVx+EphhTnFgTjZJaQ0Cqo0A8IlP
+	8e0bWh98k5EXuc3fHzHM=
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; d=sendgrid.info; 
+	h=mime-version:from:reply-to:to:in-reply-to:references:subject:content-type:content-transfer-encoding:x-feedback-id; 
+	s=smtpapi; bh=dpoFFTbOqHB1LgoCOp8OUk6a3Qs=; b=Trpd9Qa8TJnkC9JAC5
+	yrna4MF/UlSNwZ1t4l+pStBuzoV4ytjI7Ub9FfppKRE2Zl7vLOCg4bpaKiSzAZHD
+	ogU4Ip+rEGF4gckw94dzn7HCNrD0FfVBE+87RuwlbF3sPOodvD2DdYWF8yv60MGL
+	VuOEdY3lEjn9MMAd49DK2xylY=
+Received: by filter0327p1iad2.sendgrid.net with SMTP id filter0327p1iad2-27884-5B0D92A9-32
+        2018-05-29 17:49:30.058045111 +0000 UTC
+Received: from freshdesk.com (ec2-34-199-167-230.compute-1.amazonaws.com [34.199.167.230])
+	by ismtpd0001p1iad1.sendgrid.net (SG) with ESMTP id MTyrquDCRY6pk5KloKv6gQ
+	Tue, 29 May 2018 17:49:30.011 +0000 (UTC)
+MIME-Version: 1.0
+Received: from ec2-18-207-85-237.compute-1.amazonaws.com (EHLO freshdesk.com) ([18.207.85.237])
+          by smtp-submission6.localdomain (Freshworks SMTP Server) with ESMTPA ID -781782792.6;
+          Tue, 29 May 2018 17:49:29 +0000 (UTC)
+Date: Tue, 29 May 2018 17:49:30 +0000 (UTC)
+From: Appeals <appeals@scratch.mit.edu>
+Reply-To: Appeals <appeals@scratch.mit.edu>
+To: jaxonferrero1@gmail.com
+Message-ID: <5b0d92a9b5719_62fe64683a8499140f5.email-sidekiq-16@email.freshdesk.com>
+In-Reply-To: <20180526150020.53720.99023@scratchvirt3.media.mit.edu>
+References: <20180526150020.53720.99023@scratchvirt3.media.mit.edu>
+Subject: Re: [#117027] Block appeal by WindowsAdmin
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5b0d92a9c82b6_62fe64683a849914185";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+sent-on: 2018-05-29 17:49:29 +0000
+X-ACCOUNT-ID: 40167
+X-SG-EID: sdXk2bBWtIQU9c4eWpKtPZHpP+tg+1BtdY0reNvti/vO5K5akw8cXQyXs1pLekh6yfORexYCYFTjLY
+ NZl9iT2bTlXfckywa3v1wtUna3ksmem8ZXH9BWLKjEE/86sypgQD3J7YGJ0Q4SApwcQN9NoDJw94SF
+ 7eJo873olej8AVFU5UGEJPDWICkdhFyOPqrJWgwjCyb8xihaGTbNGVZ2/1E5XiHJOf5SlRGmChYSOP
+ U=
+X-SG-ID: dXNuuxiaeVPHPf1dZH02eBnXVb1bQBd7G5/HoAxnxEDAqDGeRiVBE0V7JVzSP5hCRENl/J7ZX2FS8S
+ M6QsXcQBp0m0lNz2A6QZ/wXasDfXqXpTtGG6TqsMJCQh+DZ6P4mdKW7ew9shYILb6y01SzLctTEMta
+ kD0E4a5rc9qOKZMitlWQZhgLK1rY03+bk8KXBLO8IudpOovdguzQFYuRQjKsYU3qiVTxe9NOT3TBi9
+ mMifd7zJVo2napjqzxZtl0OC+YPOmPmutVtRgV7+Yo3As2z5A7NUm1yBjPOl1xXoWhU53Jq3DT1rvc
+ I4LssSNdG7z8W8mv5jeqYxY3mbx7H3+rmw1NyboqH6sw1i6eIKx+ktBraBsl+jVMChYP2X1GehZiVY
+ 1bDwTrioZbzGUbK9X6dEAeDBR+UaIGH011ytd2dYRLVUK6o6HzEWd3j9mZ
+X-Feedback-ID: 2329044:8vJ6OL+E4YU26iGhJbbpWb/nZBtBCCMTs2S5lFUfAXE=:8vJ6OL+E4YU26iGhJbbpWb/nZBtBCCMTs2S5lFUfAXE=:SG
+
+----==_mimepart_5b0d92a9c82b6_62fe64683a849914185
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+Hi-     Your account should be working now.=C2=A0=C2=A0We have a "Need Help=
+?" option when logging in (see image below). You can use this to request a =
+password reset link.=20=20
+=20=20=20
+=20
+=20
+=20=20=20=20
+=20=20=20
+=20
+=20
+Scratch On!=20
+   Scratch Team=20
+=20
+=20
+=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20
+         On Sat, 26 May at 11:10 AM
+          ,  Jaxon Ferrero <jaxonferrero1@gmail.com>  wrote:
+           Thank you for looking into this.=C2=A0 This is my favorite game =
+and I very respectful.=C2=A0 I promise to follow all the rules.=C2=A0 I hav=
+e noticed that my password is incorrect as well.=C2=A0 Is it possible someo=
+ne else got into my account??=20
+=20
+=20=20
+=20
+=20=20
+ On Sat, May 26, 2018 at 8:00 AM, Appeals <appeals@scratch.mit.edu> wrote:=
+=20
+=20
+=20=20
+	 We=E2=80=99ve received your message, and will look into your appeal. We g=
+et a lot of messages, so it may take some time to get back to you.=20
+ - Scratch Team
+
+
+
+
+----==_mimepart_5b0d92a9c82b6_62fe64683a849914185
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<div style=3D"font-family:Helvetica Neue, Helvetica, Arial, sans-serif; fon=
+t-size:13px;">
+	<div dir=3D"ltr" style=3D'font-size: 13px; font-family: "Helvetica Neue", =
+Helvetica, Arial, sans-serif;'>
+<div></div>
+<div>
+<div>Hi-</div>
+<div><br></div>
+<div>Your account should be working now.=C2=A0=C2=A0<span style=3D"">We hav=
+e a "Need Help?" option when logging in (see image below). You can use this=
+ to request a password reset link.</span>
+</div>
+<div>
+<div style=3D'font-family: "Helvetica Neue", Helvetica, Arial, sans-serif, =
+"Helvetica Neue", Helvetica, Arial, sans-serif;'><br></div>
+<div style=3D'font-family: "Helvetica Neue", Helvetica, Arial, sans-serif, =
+"Helvetica Neue", Helvetica, Arial, sans-serif;'>
+</div>
+<div><div><img src=3D"https://s3.amazonaws.com/cdn.freshdesk.com/data/helpd=
+esk/attachments/production/4038944530/original/OAaGoleCw-ev3ss1cVakElCRzpkn=
+WuamfQ.png?1494421929" class=3D"inline-image" data-id=3D"4038944530" alt=3D=
+"image" title=3D"image" height=3D"325px" data-height=3D"325"></div></div>
+<div><br></div>
+<div></div>
+<div>
+<span style=3D'font-family: "Helvetica Neue", Helvetica, Arial, sans-serif,=
+ "Helvetica Neue", Helvetica, Arial, sans-serif;'>Scratch On!</span><br>
+</div>
+</div>
+<div><span style=3D'font-family: "Helvetica Neue", Helvetica, Arial, sans-s=
+erif, "Helvetica Neue", Helvetica, Arial, sans-serif;'>Scratch Team</span><=
+/div>
+</div>
+</div>
+                <div class=3D"freshdesk_quote">
+        <blockquote class=3D"freshdesk_quote">On Sat, 26 May at 11:10 AM
+          <span class=3D"separator"></span>,  Jaxon Ferrero &lt;jaxonferrer=
+o1@gmail.com&gt;  wrote:
+          <div dir=3D"ltr">Thank you for looking into this.=C2=A0 This is m=
+y favorite game and I very respectful.=C2=A0 I promise to follow all the ru=
+les.=C2=A0 I have noticed that my password is incorrect as well.=C2=A0 Is i=
+t possible someone else got into my account??</div>
+<div class=3D"gmail_extra">
+<br><div class=3D"gmail_quote"></div>
+</div>
+<div class=3D"freshdesk_quote"><blockquote class=3D"freshdesk_quote">
+<div>On Sat, May 26, 2018 at 8:00 AM, Appeals <span dir=3D"ltr">&lt;<a href=
+=3D"mailto:appeals@scratch.mit.edu" target=3D"_blank" rel=3D"noreferrer">ap=
+peals@scratch.mit.edu</a>&gt;</span> wrote:<br>
+</div>
+<blockquote class=3D"gmail_quote" style=3D"margin:0 0 0 .8ex;border-left:1p=
+x #ccc solid;padding-left:1ex"><div style=3D"font-family:Helvetica Neue,Hel=
+vetica,Arial,sans-serif;font-size:13px">
+	<div>We=E2=80=99ve received your message, and will look into your appeal. =
+We get a lot of messages, so it may take some time to get back to you.</div>
+<div>- Scratch Team</div>
+<br>
+
+
+
+
+</div></blockquote>
+
+<br>
+
+<br>
+
+</blockquote></div>
+        </blockquote>
+       </div>
+=20=20=20=20=20=20=20=20=20=20=20=20=20=20
+
+
+=09
+
+
+
+<span title=3D"fd_tkt_identifier" style=3D'font-size:0px; font-family:"fdtk=
+tid"; min-height:0px; height:0px; opacity:0; max-height:0px; line-height:0p=
+x; color:#ffffff'>117027:40167</span>
+
+</div>=
+
+----==_mimepart_5b0d92a9c82b6_62fe64683a849914185--

@@ -1,0 +1,123 @@
+Delivered-To: jaxonferrero1@gmail.com
+Received: by 2002:a02:4c4d:0:0:0:0:0 with SMTP id a74-v6csp1421767jab;
+        Wed, 25 Apr 2018 17:23:27 -0700 (PDT)
+X-Google-Smtp-Source: AB8JxZqGbpTemXF92+g/LgbcMfWE1M4R4HyyA76RiM46q/SDK2a0wsO8tvm/EDPJuLA7FWEeGKT9
+X-Received: by 2002:aed:2027:: with SMTP id 36-v6mr33930863qta.275.1524702207323;
+        Wed, 25 Apr 2018 17:23:27 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1524702207; cv=none;
+        d=google.com; s=arc-20160816;
+        b=oJDMWBicRftx/Jhd0zZf5tWzHYcp43dtc5uZf1/PlWBqxYxHbwK62Vp8Dg2Inxpedm
+         3xOorDFsYQgqHMgyvcKRqMjB+GVOHJUa59BvGKR320Gx5qL/VDaGXUJ6U0dFQoSBvwJZ
+         Tif4SeDkr7CU9AVh0L5VBKjhTnc1TnJrVaRWak1ZYCW4X4Cs9q+WmqFPaPe29ts+8ORA
+         fDkWShxgPD8NwQ5ap0YZdMOz7IKMtfbaC4m6R8CXoZgnsqThCrXdOUHnJltthnBHpaOY
+         HPyR4hxaMM7KIaUuVOh9CzC+Yo6gCh3NNXlKVnDCpn55sxe7yodv8xtJgH+sactUeRUD
+         St1Q==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=auto-submitted:sent-on:content-transfer-encoding:subject:references
+         :in-reply-to:message-id:to:reply-to:from:date:mime-version
+         :dkim-signature:dkim-signature:arc-authentication-results;
+        bh=oc+FZBtBOEWMybokl7PqAUYrGkZOg/0h2rvSOhWop18=;
+        b=ZyjRVUtaeT2WAzTH9v/i0L1r/lOvF2GlXLfsRJzEMHqTMSRrUUeyhqWiYpSMGbTMYI
+         HfLgcvE+XxgpxF6dlwfZiyg66+TriKzWekHAnD5U1ep07JYsfvaDcW3e7f3EZl8mAo9u
+         4rP7ko4HZXWChoPWM9ChNfYTVsCPyjhPAaXyssnOfpCIYYQMgZbcP8Dz2rbwa+aeKKMd
+         JCYXJnobN1le/DS/nFD6YhTQpCvi7bWokXAEsUobl8mf4nC6NIWMp3R4GPSTW2jARWEY
+         5z2zOqmrvcbmXhfCFkoSvQ24aEL3xUsDsvJQFsgDBXwjCT+M/W2HEq3c3KbOuDL6qRcI
+         4Ozw==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@freshdesk.com header.s=s1 header.b=igxE1Y5R;
+       dkim=pass header.i=@sendgrid.info header.s=smtpapi header.b=flj053BI;
+       spf=pass (google.com: domain of bounces+4718015-85e1-jaxonferrero1=gmail.com@smtp.freshdesk.com designates 167.89.4.19 as permitted sender) smtp.mailfrom=bounces+4718015-85e1-jaxonferrero1=gmail.com@smtp.freshdesk.com
+Return-Path: <bounces+4718015-85e1-jaxonferrero1=gmail.com@smtp.freshdesk.com>
+Received: from o5.email.freshdesk.com (o5.email.freshdesk.com. [167.89.4.19])
+        by mx.google.com with ESMTPS id q73si6930526qkl.108.2018.04.25.17.23.26
+        for <jaxonferrero1@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Wed, 25 Apr 2018 17:23:27 -0700 (PDT)
+Received-SPF: pass (google.com: domain of bounces+4718015-85e1-jaxonferrero1=gmail.com@smtp.freshdesk.com designates 167.89.4.19 as permitted sender) client-ip=167.89.4.19;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@freshdesk.com header.s=s1 header.b=igxE1Y5R;
+       dkim=pass header.i=@sendgrid.info header.s=smtpapi header.b=flj053BI;
+       spf=pass (google.com: domain of bounces+4718015-85e1-jaxonferrero1=gmail.com@smtp.freshdesk.com designates 167.89.4.19 as permitted sender) smtp.mailfrom=bounces+4718015-85e1-jaxonferrero1=gmail.com@smtp.freshdesk.com
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; d=freshdesk.com; 
+	h=mime-version:from:reply-to:to:in-reply-to:references:subject:content-type:content-transfer-encoding; 
+	s=s1; bh=USREK+0UwzaTg02lcvh2yVMNMTM=; b=igxE1Y5RIohFFlGVb7s3kLm
+	1fbVFl3j65n2n4dbw3ZZHR8kCOFH9cV5Uw3082lo19PC2vAENCXR+ajBkhlkHfiT
+	XkK88iAKoJAKgIGy6NpDqJsUBVIyFqR9QysslVOwSrP+ar4bzlAIb+81YRURtJJB
+	ItjK4PIz1X1S+XSkZlxA=
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; d=sendgrid.info; 
+	h=mime-version:from:reply-to:to:in-reply-to:references:subject:content-type:content-transfer-encoding:x-feedback-id; 
+	s=smtpapi; bh=USREK+0UwzaTg02lcvh2yVMNMTM=; b=flj053BIcUKLESrlYD
+	EYap7To2nVZ1TTsAowovIheZk7e/McMx8QUZQ268v4EVDhSBdeWk+tzANZWikKMz
+	CQlUbWrbqDt5vWg/vEiOXVB1mxdfcRZyYpNXpIKgZWXIsD7RqMjQ4CGD2lYxzVz/
+	/3WgIFHM49LZfg16gpQgwUVWU=
+Received: by filter0471p1mdw1.sendgrid.net with SMTP id filter0471p1mdw1-1925-5AE11BFD-26
+        2018-04-26 00:23:25.321634554 +0000 UTC
+Received: from freshdesk.com (ec2-34-199-167-230.compute-1.amazonaws.com [34.199.167.230])
+	by ismtpd0036p1mdw1.sendgrid.net (SG) with ESMTP id nTdXH6R9Ta6uqaVlobpT6g
+	for <jaxonferrero1@gmail.com>; Thu, 26 Apr 2018 00:23:25.327 +0000 (UTC)
+MIME-Version: 1.0
+Received: from ec2-52-5-191-226.compute-1.amazonaws.com (EHLO freshdesk.com) ([52.5.191.226])
+          by smtp-submission3.localdomain (Freshworks SMTP Server) with ESMTPA ID -1332337947.3
+          for <jaxonferrero1@gmail.com>;
+          Thu, 26 Apr 2018 00:23:25 +0000 (UTC)
+Date: Thu, 26 Apr 2018 00:23:25 +0000 (UTC)
+From: "Help@Scratch" <help@scratch.mit.edu>
+Reply-To: "Help@Scratch" <help@scratch.mit.edu>
+To: jaxonferrero1@gmail.com
+Message-ID: <5ae11bfce7486_b1b6afd3e414019ec.realtime-sidekiq-10@automation.freshdesk.com>
+In-Reply-To: <CALEJNy=W-L366sbW_ObTPo9qdvd5S3ZWnMOs2b6EjKt2uoC8XA@mail.gmail.com>
+References: <CALEJNy=W-L366sbW_ObTPo9qdvd5S3ZWnMOs2b6EjKt2uoC8XA@mail.gmail.com>
+Subject: Re: [#113772] Still
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5ae11bfcee2c8_b1b6afd3e41402087";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+sent-on: 2018-04-26 00:23:24 +0000
+Auto-Submitted: auto-generated
+X-Auto-Response-Suppress: DR, RN, OOF, AutoReply
+X-ACCOUNT-ID: 40167
+X-SG-EID: sdXk2bBWtIQU9c4eWpKtPZHpP+tg+1BtdY0reNvti/tqd1MkTZkSDen29YuT0W8JzUiTxKVz8cmJOq
+ dyWEdQppJX4plud9yLXVJTWHtQJW131HIx9fYb7MIeCvL9dC7EVGw+KD8ElfxxmdaMNzEWdIGlxBVd
+ Cf41W2CkeSt4EKpEKEmOntKya86Dhn85QTziHm7LwyY8LDT6g8B/njDysuZsw/9133nHpKBtNgKFxw
+ s=
+X-SG-ID: dXNuuxiaeVPHPf1dZH02eKbjh3uBg8I33Nxqb7HX9ymXOg0sOFWtv7DtlQ/R8vtuS5EphFq2Na3K9S
+ 3wwzmJPZ5Oo9XAW9f6eh+j4OE1oRS0UGzyiR9troyi+ZRib6CmJfwRYiBsrSQ/mAqrpTn2w+vBbB6A
+ yvw5/muPxmSj6aSmtOS3RA1YhNKAryNrZWtMUm0VDcTtCAZu04Ed5gIpfa36AXadoRB5QFHj0QnNww
+ 0wKRzuEgNERKN6QufU4JABp5gLk6C5Q0N5VFj+yIGOktHERVxgbO+F/FYZoz2DbY4beIcUjGcqd77z
+ aGdtYkwfLPJnsu0FI0EmBPwjLJhwxZ3v9lOpGVF+BikBtZY3P/ix3hpUZ0E5GPm9OvjNEl+QRB9A/I
+ VUPUjDK2Vl3+D4hy9dFubOAgCucqcmnplLBoLZMiykkEgUQI75EfrZEVdY
+X-Feedback-ID: 4718015:3wWBy12LEzRW0nIgl6oEAcpcG3WdfekREW3ie+hF7kA=:3wWBy12LEzRW0nIgl6oEAcpcG3WdfekREW3ie+hF7kA=:SG
+
+----==_mimepart_5ae11bfcee2c8_b1b6afd3e41402087
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+  This is an automated response to let you know that we=E2=80=99ve received=
+ the message you sent to Scratch. Running the Scratch website keeps us very=
+ busy, so we=E2=80=99re not able to respond to all the messages we receive.=
+=C2=A0     You can find the answers to common questions on our FAQ page: ht=
+tps://scratch.mit.edu/info/faq/=C2=A0  If you are looking for help with you=
+r Scratch projects, try our help page: http://scratch.mit.edu/help/=C2=A0  =
+If you get stuck, post a question in our discussion forums (you need to be =
+signed in to your account in order to post).=C2=A0Here are some of the best=
+ places to start: Questions about Scratch http://scratch.mit.edu/discuss/4/=
+=C2=A0  Help with Scripts http://scratch.mit.edu/discuss/7/=C2=A0     Scrat=
+ch On!  Scratch Team=20=20=20=20=
+
+----==_mimepart_5ae11bfcee2c8_b1b6afd3e41402087
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<div style="font-family:Helvetica Neue, Helvetica, Arial, sans-serif; font-size:13px;">
+	<div dir="ltr"><p><span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;">This is an automated response to let you know that we&#8217;ve received the message you sent to Scratch. Running the Scratch website keeps us very busy, so we&#8217;re not able to respond to all the messages we receive.&nbsp;</span></p><p><span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;"><br></span></p><p><span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;">You can find the answers to common questions on our <span class="caps">FAQ</span> page: <a href="https://scratch.mit.edu/info/faq/">https://scratch.mit.edu/info/faq/</a>&nbsp;</span></p><p><span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif, &quot;Helvet
+ ica Neue&quot;, Helvetica, Arial, sans-serif;">If you are looking for help with your Scratch projects, try our help page: <a href="http://scratch.mit.edu/help/">http://scratch.mit.edu/help/</a>&nbsp;</span></p><p><span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;">If you get stuck, post a question in our discussion forums (you need to be signed in to your account in o</span><span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;">rder to post).&nbsp;</span><span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;">Here are some of the best places to start: Questions about Scratch <a href="http://scratch.mit.edu/discuss/4/">http://scratch.mit.edu/discuss/4/</a>&nbsp;</span></p><p><span style="font-family: &quot;Helvetic
+ a Neue&quot;, Helvetica, Arial, sans-serif, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;">Help with Scripts <a href="http://scratch.mit.edu/discuss/7/">http://scratch.mit.edu/discuss/7/</a>&nbsp;</span></p><p><span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;"><br></span></p><p><span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;">Scratch On!</span></p><p><span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;">Scratch Team</span><br></p> </div>
+<br/>
+
+
+<span title="fd_tkt_identifier" style='font-size:0px; font-family:"fdtktid"; min-height:0px; height:0px; opacity:0; max-height:0px; line-height:0px; color:#ffffff'>113772:40167</span>
+
+</div>
+----==_mimepart_5ae11bfcee2c8_b1b6afd3e41402087--

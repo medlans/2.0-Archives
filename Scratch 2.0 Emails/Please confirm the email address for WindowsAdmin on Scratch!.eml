@@ -1,0 +1,239 @@
+Delivered-To: jaxonferrero1@gmail.com
+Received: by 10.2.149.143 with SMTP id b15csp1381270jai;
+        Thu, 22 Mar 2018 14:09:01 -0700 (PDT)
+X-Google-Smtp-Source: AG47ELuOCrOcm93rSARFnLXj6DjC39ETAqCRemielJKxHCZfT4RfMezWCR8kQ6ZyJWL73uNhVfFs
+X-Received: by 10.129.118.75 with SMTP id j11mr12164489ywk.282.1521752941151;
+        Thu, 22 Mar 2018 14:09:01 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1521752941; cv=none;
+        d=google.com; s=arc-20160816;
+        b=p08NN5bAUnWoCXUwh/0N52JRCEZnjqeJXk0EfejE2BvN9hDJ/3/WhYv2Afd+DvCivS
+         i1oUZE8JwVZh2sbZiwvejCMP6TEUR6Sdn1FUW45p+QF/eSBeYVRYhQMbkS4aUiP1290y
+         fVFyeaxVPaezNTWucxUpHIcReVE+eI5qgUI7gngvmpjUVahy2OFLwpiowuY1tTeTo9uW
+         qCcQNTeCt16dVM2rr5+SWjkYN1GvE7Kl61UMihsfTwzM/J/cmtDVoxT1TC/nOeODPe5q
+         mZPTucpF+L2QvubQR28nOg5JI8KZOSVBIAMtT9TXhsjNgxk0bkOvwBqBwP+tR1bUwWQG
+         itLA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=mime-version:date:reply-to:message-id:to:subject:from
+         :dkim-signature:dkim-signature:arc-authentication-results;
+        bh=Cxywq31CL8l5uo4xfzZuz+JsTEOr+G+GZo3rEOmAdAI=;
+        b=wNeAoeeQYtxJ3EOWfwzfNbRjDzSly1yVLFihn9hp2aUAqNSs18bexv56IYsnh7WL0l
+         SEJFg5Cnj7HqY8NBOw3ei8UY/ECDhNvlPtSMCXCDlRSpKhclhJ2COva0ch7dvAfIc9cI
+         Nh671D5C397ktkXafqHchPOUfQ4efI821InCJBda7RzrRgeRS5hSqxmEGeY0M4ADB0Hx
+         Yul6eaiCJ7TEzRLBzjBilSvoNha6e8eCNqU6HwALjZaSs2BhMVzTeWfLl2ArokgudPvW
+         LkU56AhrAdqQsOwUJQe2EgjwU4OZDOSSTkKO6uGJBIoES36ElyqP6OWQTTzMi2pue636
+         geLQ==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@scratch.mit.edu header.s=mandrill header.b=JxsmZvUd;
+       dkim=pass header.i=@mandrillapp.com header.s=mandrill header.b=E81JPMwS;
+       spf=pass (google.com: domain of bounce-md_30236239.5ab41b8b.v1-40b09eb1153140deadf56761adbba449@mandrillapp.com designates 198.2.132.2 as permitted sender) smtp.mailfrom=bounce-md_30236239.5ab41b8b.v1-40b09eb1153140deadf56761adbba449@mandrillapp.com
+Return-Path: <bounce-md_30236239.5ab41b8b.v1-40b09eb1153140deadf56761adbba449@mandrillapp.com>
+Received: from mail132-2.atl131.mandrillapp.com (mail132-2.atl131.mandrillapp.com. [198.2.132.2])
+        by mx.google.com with ESMTPS id z13-v6si1342717ybm.502.2018.03.22.14.09.00
+        for <jaxonferrero1@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Thu, 22 Mar 2018 14:09:01 -0700 (PDT)
+Received-SPF: pass (google.com: domain of bounce-md_30236239.5ab41b8b.v1-40b09eb1153140deadf56761adbba449@mandrillapp.com designates 198.2.132.2 as permitted sender) client-ip=198.2.132.2;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@scratch.mit.edu header.s=mandrill header.b=JxsmZvUd;
+       dkim=pass header.i=@mandrillapp.com header.s=mandrill header.b=E81JPMwS;
+       spf=pass (google.com: domain of bounce-md_30236239.5ab41b8b.v1-40b09eb1153140deadf56761adbba449@mandrillapp.com designates 198.2.132.2 as permitted sender) smtp.mailfrom=bounce-md_30236239.5ab41b8b.v1-40b09eb1153140deadf56761adbba449@mandrillapp.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=mandrill; d=scratch.mit.edu;
+ h=From:Subject:To:Message-Id:Reply-To:Date:MIME-Version:Content-Type; i=no-reply@scratch.mit.edu;
+ bh=Cxywq31CL8l5uo4xfzZuz+JsTEOr+G+GZo3rEOmAdAI=;
+ b=JxsmZvUdPWeiTynBFXMaoSHi//F7xAvojX05hqhB3a27vsdNgLARjOPv6dFXqNUK8B5ciqjwheJ+
+   7bghjNxflECTq4ua6cw3u2cJfNObAg9L2RXj3evKIlqwgsM5lf8RdsPlqVcer0gfWKs69EOuCDws
+   V7J9n2SFhSawXKbRTwA=
+Received: from pmta02.mandrill.prod.atl01.rsglab.com (127.0.0.1) by mail132-2.atl131.mandrillapp.com id hmgdmq1sar8i for <jaxonferrero1@gmail.com>; Thu, 22 Mar 2018 21:09:00 +0000 (envelope-from <bounce-md_30236239.5ab41b8b.v1-40b09eb1153140deadf56761adbba449@mandrillapp.com>)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=mandrillapp.com; 
+ i=@mandrillapp.com; q=dns/txt; s=mandrill; t=1521752971; h=From : 
+ Subject : To : Message-Id : Reply-To : Date : MIME-Version : 
+ Content-Type : From : Subject : Date : X-Mandrill-User : 
+ List-Unsubscribe; bh=Cxywq31CL8l5uo4xfzZuz+JsTEOr+G+GZo3rEOmAdAI=; 
+ b=E81JPMwS93pdy3qh9VeN/J7lVCaV7h1p/HTCZnU8fbAkdYuR+MZwnkZR9jSx2esUF+NA0W
+ WoXDMHcxPgu6u2sla4peJFqvoiO2RlZuxheYs5/2BD4YO/DN3D6UOysC5RWbOpF2HvOb5Z+C
+ JFDRe26yMPy3OvLz4MKzq6AfWo6RA=
+From: <no-reply@scratch.mit.edu>
+Subject: Please confirm the email address for WindowsAdmin on Scratch!
+Return-Path: <bounce-md_30236239.5ab41b8b.v1-40b09eb1153140deadf56761adbba449@mandrillapp.com>
+Received: from [18.85.28.134] by mandrillapp.com id 40b09eb1153140deadf56761adbba449; Thu, 22 Mar 2018 21:09:31 +0000
+To: <jaxonferrero1@gmail.com>
+Message-Id: <20180322210900.100823.11246@scratchvirt4>
+Reply-To: <no-reply@scratch.mit.edu>
+X-Report-Abuse: Please forward a copy of this message, including all headers, to abuse@mandrill.com
+X-Report-Abuse: You can also report abuse here: http://mandrillapp.com/contact/abuse?id=30236239.40b09eb1153140deadf56761adbba449
+X-Mandrill-User: md_30236239
+Date: Thu, 22 Mar 2018 21:09:31 +0000
+MIME-Version: 1.0
+Content-Type: multipart/alternative; boundary="_av-WQQzhSj-FF1azAyVU9Mkew"
+
+--_av-WQQzhSj-FF1azAyVU9Mkew
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+
+
+Greetings from the Scratch Team at MIT!
+
+
+A few minutes ago, you requested to link this email address to the Scratch =
+account WindowsAdmin. Please confirm your email address by clicking the but=
+ton below:
+
+
+
+https://scratch.mit.edu/accounts/email_verify/WzMxMzQ1MTc1LCJqYXhvbmZlcnJlc=
+m8xQGdtYWlsLmNvbSIsZmFsc2Vd:1ez7SG:N2vAhoy3mOtbid9i6dJIfV10cDk/
+
+If you didn=E2=80=99t request an email change, don=E2=80=99t worry - you ca=
+n just ignore this message.
+
+Scratch on!
+
+- The Scratch Team
+
+
+
+
+--_av-WQQzhSj-FF1azAyVU9Mkew
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<html>
+<head>
+</head>
+<body style=3D"border: 0;margin: 0;padding: 0;background-color: #F2F2F2">
+
+
+<div id=3D"looksfunny" style=3D"border: 0;margin: 0;padding: 0;text-align: =
+center;color: #727272;line-height: 33px">Does this email look weird? - <a h=
+ref=3D"https://scratch.mit.edu/emails/email_confirm/WzMxMzQ1MTc1LCJqYXhvbmZ=
+lcnJlcm8xQGdtYWlsLmNvbSIsZmFsc2Vd:1ez7SG:N2vAhoy3mOtbid9i6dJIfV10cDk/" styl=
+e=3D"color: #3978c6;text-decoration: none">Click Here</a></div>
+
+
+<div id=3D"content" style=3D"border: 0;margin: 0;padding: 40px 4.5%;backgro=
+und-color: #40ACD2">
+    <div id=3D"header" style=3D"border: 0;margin: 23px auto 0 auto;padding:=
+ 0;max-width: 550px;position: relative;z-index: 2">
+        <img id=3D"logo" src=3D"https://cdn.scratch.mit.edu/scratchr2/stati=
+c/__a28ece154d930633afaaeacbe1e10227__/images/mail/logo.png" style=3D"borde=
+r: 0;margin: 0 auto;padding: 0;display: block"/>
+        <img id=3D"mailbox" src=3D"https://cdn.scratch.mit.edu/scratchr2/st=
+atic/__a28ece154d930633afaaeacbe1e10227__/images/mail/mailbox.png" style=3D=
+"border: 0;margin: 0;padding: 0;display: block;position: absolute;left: 7%;=
+bottom: -33px"/>
+    </div>
+    <div id=3D"message-wrapper" style=3D"border: 0;margin: 23px auto 0 auto=
+;padding: 0;max-width: 550px;position: relative;z-index: 1;background-color=
+: #fff;border-radius: 8px;box-shadow: 0 2px 2px 2px #3a9dbf">
+        <div id=3D"top-border" style=3D"border: 0;margin: 0;padding: 0;back=
+ground-color: #FDAC44;height: 20px;width: 100%;border-radius: 8px 8px 0 0;b=
+order-bottom: 3px solid #f8981d">
+        
+        </div>
+        <div id=3D"message" style=3D"border: 0;margin: 0;padding: 25px 4.5%=
+ 40px 4.5%">
+            
+
+<p class=3D"intro-content" style=3D"border: 0;margin: 0;padding: 5px 0;font=
+-size: 18px;line-height: 30px">Greetings from the Scratch Team at MIT!</p>
+
+<p style=3D"border: 0;margin: 0;padding: 5px 0;font-size: 14px;line-height:=
+ 22px">
+    A few minutes ago, you requested to link this email address to the Scra=
+tch account <strong>WindowsAdmin</strong>. Please confirm your email addres=
+s by clicking the button below:
+</p>
+
+
+<p style=3D"border: 0;margin: 0;padding: 5px 0;font-size: 14px;line-height:=
+ 22px">
+<button class=3D"button orange" style=3D"padding: 10px 10px;margin: 10px 0;=
+background-color: #FDAC44;border-radius: 5px;border: none;color: #fff;font-=
+size: 14px"><a href=3D"https://scratch.mit.edu/accounts/email_verify/WzMxMz=
+Q1MTc1LCJqYXhvbmZlcnJlcm8xQGdtYWlsLmNvbSIsZmFsc2Vd:1ez7SG:N2vAhoy3mOtbid9i6=
+dJIfV10cDk/" style=3D"color: #fff;text-decoration: none">Confirm my email a=
+ddress</a></button>
+</p>
+<p style=3D"border: 0;margin: 0;padding: 5px 0;font-size: 14px;line-height:=
+ 22px">
+<a href=3D"https://scratch.mit.edu/accounts/email_verify/WzMxMzQ1MTc1LCJqYX=
+hvbmZlcnJlcm8xQGdtYWlsLmNvbSIsZmFsc2Vd:1ez7SG:N2vAhoy3mOtbid9i6dJIfV10cDk/"=
+ style=3D"color: #3978c6;text-decoration: none">https://scratch.mit.edu/acc=
+ounts/email_verify/WzMxMzQ1MTc1LCJqYXhvbmZlcnJlcm8xQGdtYWlsLmNvbSIsZmFsc2Vd=
+:1ez7SG:N2vAhoy3mOtbid9i6dJIfV10cDk/</a>
+</p>
+
+<p style=3D"border: 0;margin: 0;padding: 5px 0;font-size: 14px;line-height:=
+ 22px">If you didn=E2=80=99t request an email change, don=E2=80=99t worry -=
+ you can just ignore this message.</p>
+
+<p style=3D"border: 0;margin: 0;padding: 5px 0;font-size: 14px;line-height:=
+ 22px">
+    <strong>Scratch On!</strong><br/>
+    - The Scratch Team
+</p>
+
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<div id=3D"footer" style=3D"border: 0;margin: 0;padding: 0;text-align: cent=
+er;color: #727272">
+    <div id=3D"footer-inner" style=3D"border: 0;margin: 0 auto;padding: 40p=
+x 4.5%;max-width: 550px">
+        <p style=3D"border: 0;margin: 0;padding: 5px 0;font-size: 12px;line=
+-height: 22px;text-align: center">
+        
+            <a href=3D"https://scratch.mit.edu/" style=3D"color: #3978c6;te=
+xt-decoration: none">Scratch</a> is a free project of the Lifelong Kinderga=
+rten Group at the MIT Media Lab. Using Scratch, children can create interac=
+tive stories, games, and animations.
+        
+        </p>
+        <p style=3D"border: 0;margin: 0;padding: 5px 0;font-size: 12px;line=
+-height: 22px;text-align: center">
+        
+            If you have questions about Scratch or this email, please take =
+a look at our <a href=3D"https://scratch.mit.edu/info/faq/" style=3D"color:=
+ #3978c6;text-decoration: none">FAQ</a>.
+        
+        </p>
+
+        
+        <p style=3D"border: 0;margin: 0;padding: 5px 0;font-size: 12px;line=
+-height: 22px;text-align: center">
+        
+        
+            To stop receiving emails from Scratch, <a href=3D"https://scrat=
+ch.mit.edu/mail/blacklist/ImpheG9uZmVycmVybzFAZ21haWwuY29tIg/1ez7SG/u-X_8Tb=
+JbdA8Is39RBfL9YyuD0s/" style=3D"color: #3978c6;text-decoration: none">unsub=
+scribe</a>.
+        
+        </p>
+        
+        <p style=3D"border: 0;margin: 0;padding: 5px 0;font-size: 12px;line=
+-height: 22px;text-align: center">
+            <a href=3D"https://scratch.mit.edu/privacy_policy/" style=3D"co=
+lor: #3978c6;text-decoration: none">Privacy Policy</a> | 
+            <a href=3D"https://scratch.mit.edu/about/" style=3D"color: #397=
+8c6;text-decoration: none">About Scratch</a> | 
+            <a href=3D"https://secure.donationpay.org/codetolearn/" style=
+=3D"color: #3978c6;text-decoration: none">Make a Donation</a>
+        </p>
+        
+    </div>
+</div>
+
+<img src=3D"https://mandrillapp.com/track/open.php?u=3D30236239&id=3D40b09e=
+b1153140deadf56761adbba449" height=3D"1" width=3D"1"></body>
+</html>
+
+
+
+--_av-WQQzhSj-FF1azAyVU9Mkew--
+
